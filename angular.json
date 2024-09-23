@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wmer-front-end": {
+    "wmer": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/wmer-front-end",
+            "outputPath": "dist/wmer",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "wmer-front-end:build:production"
+              "buildTarget": "wmer:build:production"
             },
             "development": {
-              "buildTarget": "wmer-front-end:build:development"
+              "buildTarget": "wmer:build:development"
             }
           },
           "defaultConfiguration": "development"
