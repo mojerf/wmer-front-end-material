@@ -24,7 +24,5 @@ const MENU = [
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'wmer';
-
   menu = MENU;
 }
