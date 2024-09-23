@@ -11,12 +11,40 @@
   }
 }
 
+@font-face {
+  font-family: IRANSansX;
+  font-style: normal;
+  font-weight: bold;
+  src: url("fonts/woff/IRANSansX-Bold.woff") format("woff"),
+    url("fonts/woff2/IRANSansX-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: IRANSansX;
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/woff/IRANSansX-Regular.woff") format("woff"),
+    url("fonts/woff2/IRANSansX-Regular.woff2") format("woff2");
+}
+
 html,
 body {
   height: 100%;
 }
 
 body {
+  font-family: IRANSansX, Roboto, "Helvetica Neue", sans-serif;
+  direction: rtl;
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea {
+  font-family: IRANSansX !important;
 }
