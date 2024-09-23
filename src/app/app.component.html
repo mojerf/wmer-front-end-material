@@ -1,1 +1,22 @@
-<h1>سلام داداش</h1>
+<div class="container">
+  <header class="header">
+    <div class="top-header">
+      <img src="logo-l.png" alt="" class="logo" />
+      <div class="titles">
+        <span class="name">مجتبی عرفان راد</span>
+        <span>توسعه دهنده فول استک</span>
+      </div>
+    </div>
+    <nav class="navigation">
+      @for (item of menu; track $index) {
+      <a href="{{ item.url }}" class="link" matRipple>
+        <span class="material-symbols-outlined icon"> {{ item.icon }} </span>
+        <span>{{ item.name }}</span>
+      </a>
+      }
+    </nav>
+  </header>
+  <main class="main">
+    <div class="card"></div>
+  </main>
+</div>
