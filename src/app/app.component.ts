@@ -25,4 +25,9 @@ const MENU = [
 })
 export class AppComponent {
   menu = MENU;
+  logoUrl = 'logo-l.png';
+  titleName = 'مجتبی عرفان راد';
+  titleDesc = 'توسعه دهنده فول استک';
+
+  showFiller = false;
 }
