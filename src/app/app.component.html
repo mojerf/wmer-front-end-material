@@ -1,1 +1,33 @@
-<h1>سلام داداش</h1>
+<mat-sidenav-container class="container" autosize>
+  <mat-sidenav #drawer mode="side" position="end" opened class="sideNav">
+    <header class="header">
+      <div class="top-header">
+        <img src="{{ logoUrl }}" alt="" class="logo" />
+        <div class="titles">
+          <span class="name">{{ titleName }}</span>
+          <span>{{ titleDesc }}</span>
+        </div>
+      </div>
+      <nav class="navigation">
+        @for (item of menu; track $index) {
+        <a href="{{ item.url }}" mat-button class="link">
+          <div class="linkText">
+            <span class="material-symbols-rounded icon">
+              {{ item.icon }}
+            </span>
+            <span>{{ item.name }}</span>
+          </div>
+        </a>
+        }
+      </nav>
+    </header>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <main class="main"></main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<button type="button" mat-mini-fab (click)="drawer.toggle()" class="menuButton">
+  <span class="material-symbols-rounded">menu</span>
+</button>

@@ -6,8 +6,14 @@
 :root {
   @include mat.all-component-themes(theme.$dark-theme);
 
+  --mat-sidenav-content-background-color: #1f1f23;
+  --mat-sidenav-container-background-color: #292a2d;
+
   body[data-theme="light"] {
     @include mat.all-component-colors(theme.$light-theme);
+
+    --mat-sidenav-content-background-color: #efedf1;
+    --mat-sidenav-container-background-color: #fbf8fd;
   }
 }
 
@@ -41,4 +47,13 @@ body {
   * {
     margin: 0;
   }
+  a {
+    text-decoration: none;
+  }
+}
+
+.mat-mdc-button,
+.mat-mdc-outlined-button,
+.mat-mdc-unelevated-button {
+  font-family: inherit !important;
 }
