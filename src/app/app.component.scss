@@ -66,13 +66,33 @@
     padding: 2rem;
     box-sizing: border-box;
 
-    // .card {
-    //   height: 100%;
-    //   width: 100%;
-    //   border-radius: 1rem;
-    //   background-color: var(--mat-autocomplete-background-color);
-    //   box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.1);
-    // }
+    .mainTop {
+      display: flex;
+      justify-content: space-between;
+      padding-block-end: 2rem;
+
+      .toolbar {
+        background-color: var(--mat-sidenav-container-background-color);
+        padding: 0.75rem;
+        border-radius: 5rem;
+        display: flex;
+        gap: 0.5rem;
+
+        .toolbarButton {
+          display: flex;
+          padding: 0;
+          border: none;
+          background: none;
+          color: var(--mat-app-text-color);
+          border-radius: 5rem;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .outlet-content {
+      padding-block-start: 2rem;
+    }
   }
 }
 

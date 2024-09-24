@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 const MENU = [
   {
-    url: '#',
+    url: '',
     icon: 'home',
     name: 'صفحه اصلی',
   },
@@ -28,6 +28,16 @@ export class AppComponent {
   logoUrl = 'logo-l.png';
   titleName = 'مجتبی عرفان راد';
   titleDesc = 'توسعه دهنده فول استک';
+  themeIcon = 'contrast';
 
   showFiller = false;
+
+  toggleTheme() {
+    const bodyElement = document.getElementsByTagName('body')[0];
+    const themeState = bodyElement.dataset['theme'];
+    console.log(themeState);
+
+    bodyElement.dataset['theme'] = themeState === 'light' ? 'dark' : 'light';
+    this.themeIcon = themeState === 'light' ? 'light_mode' : 'dark_mode';
+  }
 }

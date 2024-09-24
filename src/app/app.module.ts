@@ -8,6 +8,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +19,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatRippleModule,
     MatButtonModule,
     MatSidenavModule,
+    MatTooltipModule,
+    MatDividerModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
