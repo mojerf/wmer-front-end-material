@@ -34,12 +34,12 @@ describe('AppComponent', () => {
     app.toggleTheme();
 
     expect(document.body.dataset['theme']).toBe('dark');
-    expect(app.themeIcon).toBe('dark_mode');
+    expect(app.themeIcon).toBe('light_mode');
 
     // Toggle theme again
     app.toggleTheme();
 
     expect(document.body.dataset['theme']).toBe('light');
-    expect(app.themeIcon).toBe('light_mode');
+    expect(app.themeIcon).toBe('dark_mode');
   });
 });
