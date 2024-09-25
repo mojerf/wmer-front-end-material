@@ -35,7 +35,6 @@ export class AppComponent {
   toggleTheme() {
     const bodyElement = document.getElementsByTagName('body')[0];
     const themeState = bodyElement.dataset['theme'];
-    console.log(themeState);
 
     bodyElement.dataset['theme'] = themeState === 'light' ? 'dark' : 'light';
     this.themeIcon = themeState === 'light' ? 'light_mode' : 'dark_mode';
