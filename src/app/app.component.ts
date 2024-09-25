@@ -29,13 +29,13 @@ export class AppComponent {
   titleName = 'مجتبی عرفان راد';
   titleDesc = 'توسعه دهنده فول استک';
   themeIcon = 'contrast';
+  pageTitle = 'صفحه اصلی';
 
   showFiller = false;
 
   toggleTheme() {
     const bodyElement = document.getElementsByTagName('body')[0];
     const themeState = bodyElement.dataset['theme'];
-    console.log(themeState);
 
     bodyElement.dataset['theme'] = themeState === 'light' ? 'dark' : 'light';
     this.themeIcon = themeState === 'light' ? 'light_mode' : 'dark_mode';
