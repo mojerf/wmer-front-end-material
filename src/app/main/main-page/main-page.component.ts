@@ -3,27 +3,58 @@ import { Component } from '@angular/core';
 const WORKS = [
   {
     name: 'سایت شخصی',
-    tags: ['angular', 'laravel', 'ts'],
+    tags: ['Angular', 'Laravel', 'TS'],
     image: 'website_screenshot.png',
     url: '#',
   },
   {
     name: 'سایت فروشگاهی',
-    tags: ['html', 'css', 'js', 'laravel'],
+    tags: ['Sass', 'TS', 'Laravel'],
     image: 'website_screenshot.png',
     url: '#',
   },
   {
-    name: 'سایت فروشگاهی',
-    tags: ['html', 'css', 'js', 'laravel'],
+    name: 'اتوماسیون اداری',
+    tags: ['Angular', 'Laravel'],
     image: 'website_screenshot.png',
     url: '#',
   },
   {
-    name: 'سایت فروشگاهی',
-    tags: ['html', 'css', 'js', 'laravel'],
+    name: 'سایت دانلود فیلم',
+    tags: ['HTML', 'CSS', 'PHP'],
     image: 'website_screenshot.png',
     url: '#',
+  },
+];
+
+const POSTS = [
+  {
+    title: 'تبدیل قالب html به وردپرس با pinegrow',
+    url: '#',
+    img: 'post.jpg',
+    date: '1403/07/06',
+    commentCount: 10,
+  },
+  {
+    title: 'تبدیل قالب html به وردپرس با pinegrow',
+    url: '#',
+    img: 'post.jpg',
+    date: '1403/07/06',
+    commentCount: 10,
+  },
+  {
+    title: 'تبدیل قالب html به وردپرس با pinegrow',
+    url: '#',
+    img: 'post.jpg',
+    date: '1403/07/06',
+    commentCount: 10,
+  },
+  {
+    title: 'تبدیل قالب html به وردپرس با pinegrow',
+    url: '#',
+    img: 'post.jpg',
+    date: '1403/07/06',
+    commentCount: 10,
   },
 ];
 
@@ -38,4 +69,5 @@ export class MainPageComponent {
   expYears = this.currentYear - 2015;
   age = this.currentYear - 2000;
   works = WORKS;
+  posts = POSTS;
 }

@@ -18,7 +18,7 @@
     <section class="works">
       <div class="works-title-container">
         <a href="#" class="works-title">
-          نمونه کار
+          نمونه کار ها
           <span class="material-symbols-rounded"> arrow_left_alt </span>
         </a>
       </div>
@@ -37,6 +37,41 @@
               <mat-chip>{{ tag }}</mat-chip
               >}
             </mat-chip-set>
+          </div>
+        </div>
+        }
+      </div>
+    </section>
+    <section class="posts">
+      <div class="posts-title-container">
+        <a href="#" class="posts-title">
+          پست ها
+          <span class="material-symbols-rounded"> arrow_left_alt </span>
+        </a>
+      </div>
+      <div class="posts-container">
+        @for (post of posts; track $index) {
+        <div class="post-card">
+          <img src="{{ post.img }}" alt="" class="post-image" />
+          <div class="post-detail">
+            <h4
+              class="post-title"
+              matTooltip="{{ post.title }}"
+              matTooltipPosition="above"
+            >
+              {{ post.title }}
+            </h4>
+            <a href="{{ post.url }}" mat-flat-button>نمایش مطلب</a>
+            <div class="post-footer">
+              <span class="post-footer-component">
+                <span class="material-symbols-rounded"> calendar_today </span>
+                <span class="text">{{ post.date }}</span>
+              </span>
+              <span class="post-footer-component">
+                <span class="material-symbols-rounded"> forum </span>
+                <span class="text">{{ post.commentCount }}</span>
+              </span>
+            </div>
           </div>
         </div>
         }
