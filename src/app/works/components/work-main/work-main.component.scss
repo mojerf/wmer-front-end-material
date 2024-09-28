@@ -20,21 +20,6 @@
       .works {
         width: 100%;
 
-        .works-title-container {
-          text-align: center;
-          padding-block-end: 1.5rem;
-
-          .works-title {
-            border-bottom: 1px solid var(--mat-app-text-color);
-            padding-inline: 0.5rem;
-            display: inline-flex;
-            align-items: center;
-            color: var(--mat-app-text-color);
-            font-size: 1.15rem;
-            font-weight: bold;
-            padding-bottom: 0.1rem;
-          }
-        }
         .works-container {
           display: grid;
           gap: 1rem;

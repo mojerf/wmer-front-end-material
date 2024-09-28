@@ -1,1 +1,40 @@
-<p>store-main works!</p>
+<div class="container">
+  <div class="card">
+    <div class="store">
+      <div class="store-container">
+        @for (product of products; track $index) {
+        <div class="product-card">
+          <img src="{{ product.img }}" alt="" class="product-image" />
+          <div class="product-detail">
+            <h4
+              class="product-title"
+              matTooltip="{{ product.title }}"
+              matTooltipPosition="above"
+            >
+              {{ product.title }}
+            </h4>
+            <a href="{{ product.url }}" mat-flat-button>نمایش محصول</a>
+            <div class="product-footer">
+              <span class="product-footer-component">
+                <span class="material-symbols-rounded"> calendar_today </span>
+                <span class="text">{{ product.date }}</span>
+              </span>
+              <span class="product-footer-component">
+                <span class="material-symbols-rounded"> forum </span>
+                <span class="text">{{ product.commentCount }}</span>
+              </span>
+              <span class="product-footer-component">
+                <span class="material-symbols-rounded"> payments </span>
+                <span class="text"
+                  >{{ product.price.toLocaleString() }} تومان</span
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      <app-paginator class="paginator"></app-paginator>
+    </div>
+  </div>
+</div>

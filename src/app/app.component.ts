@@ -14,13 +14,13 @@ const MENU = [
     exact: false,
   },
   {
-    url: '#',
+    url: 'posts',
     icon: 'description',
     name: 'نوشته ها',
     exact: false,
   },
   {
-    url: '#',
+    url: 'store',
     icon: 'store',
     name: 'فروشگاه',
     exact: false,
