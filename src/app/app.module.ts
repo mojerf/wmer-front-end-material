@@ -11,11 +11,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDividerModule } from '@angular/material/divider';
 import { MainModule } from './main/main.module';
+import { WorksModule } from './works/works.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     MainModule,
+    WorksModule,
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     MatRippleModule,

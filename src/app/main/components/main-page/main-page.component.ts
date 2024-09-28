@@ -99,6 +99,7 @@ const PRODUCTS = [
   styleUrl: './main-page.component.scss',
 })
 export class MainPageComponent {
+  title = 'صفحه اصلی';
   aboutMeImage = 'programmer.jpg';
   currentYear = new Date().getFullYear();
   expYears = this.currentYear - 2015;

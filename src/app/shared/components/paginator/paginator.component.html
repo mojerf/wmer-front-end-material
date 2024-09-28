@@ -1,0 +1,42 @@
+<div class="container">
+  <button
+    class="button"
+    mat-ripple
+    [disabled]="disabledPrevious"
+    matTooltip="صفحه اول"
+    (click)="firstPage()"
+  >
+    <span class="material-symbols-rounded"> last_page </span>
+  </button>
+  <button
+    class="button"
+    mat-ripple
+    [disabled]="disabledPrevious"
+    matTooltip="صفحه قبل"
+    (click)="previousPage()"
+  >
+    <span class="material-symbols-rounded"> chevron_right </span>
+  </button>
+  <button
+    class="button"
+    mat-ripple
+    [disabled]="disabledNext"
+    matTooltip="صفحه بعد"
+    (click)="nextPage()"
+  >
+    <span class="material-symbols-rounded"> chevron_left </span>
+  </button>
+  <button
+    class="button"
+    mat-ripple
+    [disabled]="disabledNext"
+    matTooltip="صفحه آخر"
+    (click)="lastPage()"
+  >
+    <span class="material-symbols-rounded"> first_page </span>
+  </button>
+  <small
+    >{{ findFirstItemInPage() }} - {{ findLatestItemInPage() }} از
+    {{ totalItems }}</small
+  >
+</div>

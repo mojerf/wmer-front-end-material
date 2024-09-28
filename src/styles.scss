@@ -82,3 +82,16 @@ body {
     font-family: IRANSansX !important;
   }
 }
+
+.mat-mdc-paginator {
+  background-color: inherit !important;
+  direction: ltr;
+}
+
+.mat-mdc-paginator,
+.mat-tooltip {
+  font-family: IRANSansX !important;
+}
+.mat-mdc-paginator-container {
+  justify-content: center !important;
+}
