@@ -5,16 +5,25 @@ const MENU = [
     url: '',
     icon: 'home',
     name: 'صفحه اصلی',
+    exact: true,
   },
   {
-    url: '#',
+    url: 'works',
     icon: 'work',
     name: 'نمونه کار ها',
+    exact: false,
   },
   {
     url: '#',
     icon: 'description',
-    name: 'پست ها',
+    name: 'نوشته ها',
+    exact: false,
+  },
+  {
+    url: '#',
+    icon: 'store',
+    name: 'فروشگاه',
+    exact: false,
   },
 ];
 
@@ -24,6 +33,9 @@ const MENU = [
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  showNewName($event: Event) {
+    console.log($event);
+  }
   menu = MENU;
   logoUrl = 'logo-l.png';
   titleName = 'مجتبی عرفان راد';

@@ -15,6 +15,7 @@
           class="link"
           routerLink="{{ item.url }}"
           routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: item.exact }"
         >
           <div class="linkText">
             <span class="material-symbols-rounded icon">
@@ -28,7 +29,7 @@
     </header>
   </mat-sidenav>
 
-  <mat-sidenav-content>
+  <mat-sidenav-content class="sidenav-content">
     <main class="main">
       <div class="mainTop">
         <h1 class="title">{{ pageTitle }}</h1>
@@ -53,7 +54,7 @@
       </div>
       <mat-divider></mat-divider>
       <div class="outlet-content">
-        <router-outlet></router-outlet>
+        <router-outlet (nameChange)="showNewName($event)"></router-outlet>
       </div>
     </main>
     <footer class="footer">

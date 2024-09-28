@@ -72,56 +72,63 @@
     }
   }
 
-  .main {
-    width: 100%;
-    padding: 2.5rem;
-    box-sizing: border-box;
+  .sidenav-content {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 
-    .mainTop {
-      display: flex;
-      justify-content: space-between;
-      padding-block-end: 2rem;
+    .main {
+      width: 100%;
+      padding: 2.5rem;
+      box-sizing: border-box;
+      flex: 1 0 auto;
 
-      .title {
-        font-size: 1.75rem;
-      }
-
-      .toolbar {
-        background-color: var(--mat-sidenav-container-background-color);
-        padding: 0.5rem 0.75rem;
-        border-radius: 5rem;
+      .mainTop {
         display: flex;
-        gap: 0.5rem;
-        box-shadow: var(--small-shadow);
+        justify-content: space-between;
+        padding-block-end: 2rem;
 
-        .toolbarButton {
-          display: flex;
-          padding: 0;
-          border: none;
-          background: none;
-          color: var(--mat-app-text-color);
+        .title {
+          font-size: 1.75rem;
+        }
+
+        .toolbar {
+          background-color: var(--mat-sidenav-container-background-color);
+          padding: 0.5rem 0.75rem;
           border-radius: 5rem;
-          cursor: pointer;
+          display: flex;
+          gap: 0.5rem;
+          box-shadow: var(--small-shadow);
+
+          .toolbarButton {
+            display: flex;
+            padding: 0;
+            border: none;
+            background: none;
+            color: var(--mat-app-text-color);
+            border-radius: 5rem;
+            cursor: pointer;
+          }
         }
       }
+
+      .outlet-content {
+        padding-block-start: 2.5rem;
+      }
     }
 
-    .outlet-content {
-      padding-block-start: 2.5rem;
-    }
-  }
+    .footer {
+      padding: 2.5rem;
+      padding-bottom: 0;
 
-  .footer {
-    padding: 2.5rem;
-    padding-bottom: 0;
-
-    .footer-container {
-      background-color: var(--mat-sidenav-container-background-color);
-      border-start-start-radius: 1.5rem;
-      border-start-end-radius: 1.5rem;
-      padding: 1rem 2rem;
-      text-align: center;
-      box-shadow: var(--small-shadow);
+      .footer-container {
+        background-color: var(--mat-sidenav-container-background-color);
+        border-start-start-radius: 2rem;
+        border-start-end-radius: 2rem;
+        padding: 1rem 2rem;
+        text-align: center;
+        box-shadow: var(--small-shadow);
+      }
     }
   }
 }

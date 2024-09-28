@@ -58,6 +58,41 @@ const POSTS = [
   },
 ];
 
+const PRODUCTS = [
+  {
+    title: 'قالب شخصی حرفه ای',
+    url: '#',
+    img: 'product.jpg',
+    date: '1403/07/06',
+    commentCount: 10,
+    price: 50000,
+  },
+  {
+    title: 'قالب شخصی حرفه ای',
+    url: '#',
+    img: 'product.jpg',
+    date: '1403/07/06',
+    commentCount: 10,
+    price: 50000,
+  },
+  {
+    title: 'قالب شخصی حرفه ای',
+    url: '#',
+    img: 'product.jpg',
+    date: '1403/07/06',
+    commentCount: 10,
+    price: 50000,
+  },
+  {
+    title: 'قالب شخصی حرفه ای',
+    url: '#',
+    img: 'product.jpg',
+    date: '1403/07/06',
+    commentCount: 10,
+    price: 50000,
+  },
+];
+
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
@@ -70,4 +105,5 @@ export class MainPageComponent {
   age = this.currentYear - 2000;
   works = WORKS;
   posts = POSTS;
+  products = PRODUCTS;
 }

@@ -73,3 +73,12 @@ body {
 .mat-mdc-tooltip {
   direction: rtl;
 }
+
+.mdc-text-field {
+  padding: 0 16px !important;
+  font-family: IRANSansX !important;
+
+  .mdc-floating-label {
+    font-family: IRANSansX !important;
+  }
+}
