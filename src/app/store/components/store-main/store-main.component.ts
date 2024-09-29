@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 const PRODUCTS = [
   {
+    id: 1,
     title: 'قالب شخصی حرفه ای',
     url: '#',
     img: 'product.jpg',
@@ -10,6 +11,7 @@ const PRODUCTS = [
     price: 50000,
   },
   {
+    id: 2,
     title: 'قالب شخصی حرفه ای',
     url: '#',
     img: 'product.jpg',
@@ -18,6 +20,7 @@ const PRODUCTS = [
     price: 50000,
   },
   {
+    id: 3,
     title: 'قالب شخصی حرفه ای',
     url: '#',
     img: 'product.jpg',
@@ -26,6 +29,7 @@ const PRODUCTS = [
     price: 50000,
   },
   {
+    id: 4,
     title: 'قالب شخصی حرفه ای',
     url: '#',
     img: 'product.jpg',
