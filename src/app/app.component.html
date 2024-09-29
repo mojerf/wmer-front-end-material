@@ -5,12 +5,18 @@
         <img src="{{ logoUrl }}" alt="" class="logo" />
         <div class="titles">
           <span class="name">{{ titleName }}</span>
-          <span>{{ titleDesc }}</span>
+          <span class="description">{{ titleDesc }}</span>
         </div>
       </div>
       <nav class="navigation">
         @for (item of menu; track $index) {
-        <a href="{{ item.url }}" mat-button class="link">
+        <a
+          mat-button
+          class="link"
+          routerLink="{{ item.url }}"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: item.exact }"
+        >
           <div class="linkText">
             <span class="material-symbols-rounded icon">
               {{ item.icon }}
@@ -23,11 +29,38 @@
     </header>
   </mat-sidenav>
 
-  <mat-sidenav-content>
-    <main class="main"></main>
+  <mat-sidenav-content class="sidenav-content">
+    <main class="main">
+      <div class="mainTop">
+        <h1 class="title">{{ pageTitle }}</h1>
+        <div class="toolbar">
+          <button
+            type="button"
+            class="toolbarButton"
+            (click)="toggleTheme()"
+            matTooltip="تغییر تم سایت"
+          >
+            <span class="material-symbols-rounded">{{ themeIcon }}</span>
+          </button>
+          <button
+            type="button"
+            (click)="drawer.toggle()"
+            class="toolbarButton"
+            matTooltip="باز/بستن منو"
+          >
+            <span class="material-symbols-rounded">menu</span>
+          </button>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="outlet-content">
+        <router-outlet (nameChange)="showNewName($event)"></router-outlet>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        طراحی و پیاده سازی شده توسط مجتبی عرفان راد 😄❤
+      </div>
+    </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-<button type="button" mat-mini-fab (click)="drawer.toggle()" class="menuButton">
-  <span class="material-symbols-rounded">menu</span>
-</button>

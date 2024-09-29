@@ -1,0 +1,171 @@
+<div class="container">
+  <div class="card">
+    <section class="about">
+      <img
+        src="{{ aboutMeImage }}"
+        alt="مجتبی عرفان راد"
+        class="about-image mat-elevation-z4"
+      />
+      <div class="about-text">
+        <h1 class="about-title">سلام، مجتبی عرفان راد هستم.</h1>
+        <p class="about-description">
+          توسعه دهنده {{ age }} ساله ساکن اصفهان، عاشق کامپیوتر و برنامه نویسی و
+          یادگیری، بیش از {{ expYears }} سال از اولین خط کدی که زدم میگذره حتما
+          یه نگاهی به نمونه کارهام بنداز :)
+        </p>
+      </div>
+    </section>
+    <section class="works">
+      <div class="works-title-container">
+        <a href="#" class="works-title">
+          نمونه کار ها
+          <span class="material-symbols-rounded"> arrow_left_alt </span>
+        </a>
+      </div>
+      <div class="works-container">
+        @for (work of works; track $index) {
+        <div class="work-card">
+          <img
+            src="{{ work.image }}"
+            alt="{{ work.name }}"
+            class="work-image"
+          />
+          <div class="work-title">{{ work.name }}</div>
+          <div class="work-tags">
+            <mat-chip-set>
+              @for (tag of work.tags; track $index) {
+              <mat-chip>{{ tag }}</mat-chip
+              >}
+            </mat-chip-set>
+          </div>
+        </div>
+        }
+      </div>
+    </section>
+    <section class="posts">
+      <div class="posts-title-container">
+        <a href="#" class="posts-title">
+          نوشته ها
+          <span class="material-symbols-rounded"> arrow_left_alt </span>
+        </a>
+      </div>
+      <div class="posts-container">
+        @for (post of posts; track $index) {
+        <div class="post-card">
+          <img src="{{ post.img }}" alt="" class="post-image" />
+          <div class="post-detail">
+            <h4
+              class="post-title"
+              matTooltip="{{ post.title }}"
+              matTooltipPosition="above"
+            >
+              {{ post.title }}
+            </h4>
+            <a href="{{ post.url }}" mat-flat-button>نمایش مطلب</a>
+            <div class="post-footer">
+              <span class="post-footer-component">
+                <span class="material-symbols-rounded"> calendar_today </span>
+                <span class="text">{{ post.date }}</span>
+              </span>
+              <span class="post-footer-component">
+                <span class="material-symbols-rounded"> forum </span>
+                <span class="text">{{ post.commentCount }}</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </section>
+    <section class="store">
+      <div class="store-title-container">
+        <a href="#" class="store-title">
+          فروشگاه
+          <span class="material-symbols-rounded"> arrow_left_alt </span>
+        </a>
+      </div>
+      <div class="store-container">
+        @for (product of products; track $index) {
+        <div class="product-card">
+          <img src="{{ product.img }}" alt="" class="product-image" />
+          <div class="product-detail">
+            <h4
+              class="product-title"
+              matTooltip="{{ product.title }}"
+              matTooltipPosition="above"
+            >
+              {{ product.title }}
+            </h4>
+            <a href="{{ product.url }}" mat-flat-button>نمایش محصول</a>
+            <div class="product-footer">
+              <span class="product-footer-component">
+                <span class="material-symbols-rounded"> calendar_today </span>
+                <span class="text">{{ product.date }}</span>
+              </span>
+              <span class="product-footer-component">
+                <span class="material-symbols-rounded"> forum </span>
+                <span class="text">{{ product.commentCount }}</span>
+              </span>
+              <span class="product-footer-component">
+                <span class="material-symbols-rounded"> payments </span>
+                <span class="text"
+                  >{{ product.price.toLocaleString() }} تومان</span
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </section>
+    <section class="contact">
+      <div class="contact-title-container">
+        <a href="#" class="contact-title">
+          تماس با من
+          <span class="material-symbols-rounded"> arrow_left_alt </span>
+        </a>
+      </div>
+      <div class="contact-form-container">
+        <form class="contact-form">
+          <mat-form-field appearance="fill">
+            <mat-label>شماره تماس</mat-label>
+            <input matInput />
+            <span class="material-symbols-rounded" matSuffix> phone </span>
+            <mat-hint>مثال: 09123456789</mat-hint>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>ایمیل*</mat-label>
+            <input matInput />
+            <span class="material-symbols-rounded" matSuffix> mail </span>
+            <mat-hint>مثال: {{ "mail@example.com" }}</mat-hint>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>پیام*</mat-label>
+            <textarea matInput rows="5"></textarea>
+            <span class="material-symbols-rounded" matSuffix> chat </span>
+            <mat-hint>لطفا رمزی پیام ندید 😂</mat-hint>
+          </mat-form-field>
+          <button mat-flat-button type="submit">ارسال</button>
+        </form>
+        <div class="contact-form-description">
+          <p>سلام، وقت بخیر</p>
+          <p>لطفا پس از شنیدن صدای بوق پیغام خود را بگذارید.</p>
+          <strong>*بیب*</strong>
+          <hr />
+          <p class="contact-details">
+            <strong class="contact-details-title">
+              <span class="material-symbols-rounded"> mail </span> ایمیل :
+            </strong>
+            {{ "mojerf@yahoo.com" }}
+          </p>
+          <p class="contact-details">
+            <strong class="contact-details-title">
+              <span class="material-symbols-rounded"> phone </span> شماره تماس :
+            </strong>
+            09134456789
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

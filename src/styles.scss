@@ -9,11 +9,22 @@
   --mat-sidenav-content-background-color: #1f1f23;
   --mat-sidenav-container-background-color: #292a2d;
 
+  --card-background: #303034;
+  --card-image-bg: #000;
+  --card-border-color: #46464a;
+
+  --small-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07),
+    0 10px 20px -2px rgba(0, 0, 0, 0.04);
+
   body[data-theme="light"] {
     @include mat.all-component-colors(theme.$light-theme);
 
     --mat-sidenav-content-background-color: #efedf1;
-    --mat-sidenav-container-background-color: #fbf8fd;
+    --mat-sidenav-container-background-color: #f2f0f4;
+
+    --card-background: #f2f0f4;
+    --card-image-bg: #fff;
+    --card-border-color: #acaaaf;
   }
 }
 
@@ -49,6 +60,7 @@ body {
   }
   a {
     text-decoration: none;
+    color: var(--mat-app-text-color);
   }
 }
 
@@ -56,4 +68,17 @@ body {
 .mat-mdc-outlined-button,
 .mat-mdc-unelevated-button {
   font-family: inherit !important;
+}
+
+.mat-mdc-tooltip {
+  direction: rtl;
+}
+
+.mdc-text-field {
+  padding: 0 16px !important;
+  font-family: IRANSansX !important;
+
+  .mdc-floating-label {
+    font-family: IRANSansX !important;
+  }
 }
