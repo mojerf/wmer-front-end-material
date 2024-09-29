@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkPageComponent } from './work-page.component';
+import { RouterModule } from '@angular/router';
 
 describe('WorkPageComponent', () => {
   let component: WorkPageComponent;
@@ -8,9 +9,9 @@ describe('WorkPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [WorkPageComponent]
-    })
-    .compileComponents();
+      imports: [RouterModule.forRoot([])],
+      declarations: [WorkPageComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(WorkPageComponent);
     component = fixture.componentInstance;

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PostPageComponent } from './post-page.component';
+import { RouterModule } from '@angular/router';
 
 describe('PostPageComponent', () => {
   let component: PostPageComponent;
@@ -8,9 +9,9 @@ describe('PostPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PostPageComponent]
-    })
-    .compileComponents();
+      declarations: [PostPageComponent],
+      imports: [RouterModule.forRoot([])],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PostPageComponent);
     component = fixture.componentInstance;

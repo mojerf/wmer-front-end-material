@@ -7,6 +7,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
 describe('MainPageComponent', () => {
   let component: MainPageComponent;
@@ -22,6 +23,7 @@ describe('MainPageComponent', () => {
         MatFormFieldModule,
         MatInputModule,
         NoopAnimationsModule,
+        RouterModule.forRoot([]),
       ],
     }).compileComponents();
 
