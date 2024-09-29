@@ -1,0 +1,23 @@
+:host {
+  width: 100%;
+
+  .card {
+    border-radius: 1.5rem;
+    background: var(--card-background);
+    padding: 2rem;
+    box-shadow: var(--small-shadow);
+
+    .details-container {
+      display: flex;
+      width: 100%;
+      gap: 2rem;
+      padding-block-end: 1.5rem;
+
+      .top-image {
+        border-radius: 1rem;
+        box-shadow: var(--small-shadow);
+        width: 20rem;
+      }
+    }
+  }
+}

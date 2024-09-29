@@ -3,28 +3,28 @@ import { Component } from '@angular/core';
 const WORKS = [
   {
     id: 1,
-    name: 'سایت شخصی',
+    title: 'سایت شخصی',
     tags: ['Angular', 'Laravel', 'TS'],
     image: 'website_screenshot.png',
     url: 'سایت-شخصی',
   },
   {
     id: 2,
-    name: 'سایت فروشگاهی',
+    title: 'سایت فروشگاهی',
     tags: ['Sass', 'TS', 'Laravel'],
     image: 'website_screenshot.png',
     url: 'سایت-شخصی',
   },
   {
     id: 3,
-    name: 'اتوماسیون اداری',
+    title: 'اتوماسیون اداری',
     tags: ['Angular', 'Laravel'],
     image: 'website_screenshot.png',
     url: 'سایت-شخصی',
   },
   {
     id: 4,
-    name: 'سایت دانلود فیلم',
+    title: 'سایت دانلود فیلم',
     tags: ['HTML', 'CSS', 'PHP'],
     image: 'website_screenshot.png',
     url: 'سایت-شخصی',
