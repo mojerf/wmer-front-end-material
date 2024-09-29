@@ -6,28 +6,28 @@ const WORKS = [
     name: 'سایت شخصی',
     tags: ['Angular', 'Laravel', 'TS'],
     image: 'website_screenshot.png',
-    url: '#',
+    url: 'سایت-شخصی',
   },
   {
     id: 2,
     name: 'سایت فروشگاهی',
     tags: ['Sass', 'TS', 'Laravel'],
     image: 'website_screenshot.png',
-    url: '#',
+    url: 'سایت-شخصی',
   },
   {
     id: 3,
     name: 'اتوماسیون اداری',
     tags: ['Angular', 'Laravel'],
     image: 'website_screenshot.png',
-    url: '#',
+    url: 'سایت-شخصی',
   },
   {
     id: 4,
     name: 'سایت دانلود فیلم',
     tags: ['HTML', 'CSS', 'PHP'],
     image: 'website_screenshot.png',
-    url: '#',
+    url: 'سایت-شخصی',
   },
 ];
 

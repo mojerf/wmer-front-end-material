@@ -13,7 +13,9 @@
             >
               {{ product.title }}
             </h4>
-            <a href="{{ product.url }}" mat-flat-button>نمایش محصول</a>
+            <a routerLink="/store/{{ product.url }}" mat-flat-button
+              >نمایش محصول</a
+            >
             <div class="product-footer">
               <span class="product-footer-component">
                 <span class="material-symbols-rounded"> calendar_today </span>

@@ -13,7 +13,7 @@
             >
               {{ post.title }}
             </h4>
-            <a href="{{ post.url }}" mat-flat-button>نمایش مطلب</a>
+            <a routerLink="/posts/{{ post.url }}" mat-flat-button>نمایش مطلب</a>
             <div class="post-footer">
               <span class="post-footer-component">
                 <span class="material-symbols-rounded"> calendar_today </span>

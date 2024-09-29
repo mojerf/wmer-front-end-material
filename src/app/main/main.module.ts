@@ -7,6 +7,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [MainPageComponent],
@@ -17,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    AppRoutingModule,
   ],
 })
 export class MainModule {}

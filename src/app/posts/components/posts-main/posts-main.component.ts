@@ -4,7 +4,7 @@ const POSTS = [
   {
     id: 1,
     title: 'تبدیل قالب html به وردپرس با pinegrow',
-    url: '/posts/تبدیل-قالب',
+    url: 'تبدیل-قالب',
     img: 'post.jpg',
     date: '1403/07/06',
     commentCount: 10,
@@ -12,7 +12,7 @@ const POSTS = [
   {
     id: 2,
     title: 'تبدیل قالب html به وردپرس با pinegrow',
-    url: '/posts/تبدیل-قالب',
+    url: 'تبدیل-قالب',
     img: 'post.jpg',
     date: '1403/07/06',
     commentCount: 10,
@@ -20,7 +20,7 @@ const POSTS = [
   {
     id: 3,
     title: 'تبدیل قالب html به وردپرس با pinegrow',
-    url: '/posts/تبدیل-قالب',
+    url: 'تبدیل-قالب',
     img: 'post.jpg',
     date: '1403/07/06',
     commentCount: 10,
@@ -28,7 +28,7 @@ const POSTS = [
   {
     id: 4,
     title: 'تبدیل قالب html به وردپرس با pinegrow',
-    url: '/posts/تبدیل-قالب',
+    url: 'تبدیل-قالب',
     img: 'post.jpg',
     date: '1403/07/06',
     commentCount: 10,

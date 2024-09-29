@@ -4,7 +4,7 @@ const PRODUCTS = [
   {
     id: 1,
     title: 'قالب شخصی حرفه ای',
-    url: '#',
+    url: 'قالب-شخصی-حرفه-ای',
     img: 'product.jpg',
     date: '1403/07/06',
     commentCount: 10,
@@ -13,7 +13,7 @@ const PRODUCTS = [
   {
     id: 2,
     title: 'قالب شخصی حرفه ای',
-    url: '#',
+    url: 'قالب-شخصی-حرفه-ای',
     img: 'product.jpg',
     date: '1403/07/06',
     commentCount: 10,
@@ -22,7 +22,7 @@ const PRODUCTS = [
   {
     id: 3,
     title: 'قالب شخصی حرفه ای',
-    url: '#',
+    url: 'قالب-شخصی-حرفه-ای',
     img: 'product.jpg',
     date: '1403/07/06',
     commentCount: 10,
@@ -31,7 +31,7 @@ const PRODUCTS = [
   {
     id: 4,
     title: 'قالب شخصی حرفه ای',
-    url: '#',
+    url: 'قالب-شخصی-حرفه-ای',
     img: 'product.jpg',
     date: '1403/07/06',
     commentCount: 10,

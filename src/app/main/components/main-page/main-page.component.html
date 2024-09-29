@@ -17,7 +17,7 @@
     </section>
     <section class="works">
       <div class="works-title-container">
-        <a href="/works" class="works-title">
+        <a routerLink="/works" class="works-title">
           نمونه کار ها
           <span class="material-symbols-rounded"> arrow_left_alt </span>
         </a>
@@ -30,7 +30,9 @@
             alt="{{ work.name }}"
             class="work-image"
           />
-          <div class="work-title">{{ work.name }}</div>
+          <div class="work-title">
+            <a routerLink="/works/{{ work.url }}"> {{ work.name }}</a>
+          </div>
           <div class="work-tags">
             <mat-chip-set>
               @for (tag of work.tags; track $index) {
@@ -44,7 +46,7 @@
     </section>
     <section class="posts">
       <div class="posts-title-container">
-        <a href="/posts" class="posts-title">
+        <a routerLink="/posts" class="posts-title">
           نوشته ها
           <span class="material-symbols-rounded"> arrow_left_alt </span>
         </a>
@@ -61,7 +63,7 @@
             >
               {{ post.title }}
             </h4>
-            <a href="{{ post.url }}" mat-flat-button>نمایش مطلب</a>
+            <a routerLink="/posts/{{ post.url }}" mat-flat-button>نمایش مطلب</a>
             <div class="post-footer">
               <span class="post-footer-component">
                 <span class="material-symbols-rounded"> calendar_today </span>
@@ -79,7 +81,7 @@
     </section>
     <section class="store">
       <div class="store-title-container">
-        <a href="/store" class="store-title">
+        <a routerLink="/store" class="store-title">
           فروشگاه
           <span class="material-symbols-rounded"> arrow_left_alt </span>
         </a>
@@ -96,7 +98,9 @@
             >
               {{ product.title }}
             </h4>
-            <a href="{{ product.url }}" mat-flat-button>نمایش محصول</a>
+            <a routerLink="/store/{{ product.url }}" mat-flat-button
+              >نمایش محصول</a
+            >
             <div class="product-footer">
               <span class="product-footer-component">
                 <span class="material-symbols-rounded"> calendar_today </span>
@@ -118,9 +122,9 @@
         }
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="تماس-با-من">
       <div class="contact-title-container">
-        <a href="#" class="contact-title">
+        <a href="#تماس-با-من" class="contact-title">
           تماس با من
           <span class="material-symbols-rounded"> arrow_left_alt </span>
         </a>

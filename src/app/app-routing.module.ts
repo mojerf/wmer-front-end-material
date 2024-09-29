@@ -48,7 +48,6 @@ const routes: Routes = [
   },
   {
     path: 'store',
-    component: StoreMainComponent,
     title: 'مجتبی عرفان راد | فروشگاه',
     children: [
       {

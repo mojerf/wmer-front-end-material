@@ -6,28 +6,28 @@ const WORKS = [
     name: 'سایت شخصی',
     tags: ['Angular', 'Laravel', 'TS'],
     image: 'website_screenshot.png',
-    url: '#',
+    url: 'سایت-شخصی',
   },
   {
     id: 2,
     name: 'سایت فروشگاهی',
     tags: ['Sass', 'TS', 'Laravel'],
     image: 'website_screenshot.png',
-    url: '#',
+    url: 'سایت-شخصی',
   },
   {
     id: 3,
     name: 'اتوماسیون اداری',
     tags: ['Angular', 'Laravel'],
     image: 'website_screenshot.png',
-    url: '#',
+    url: 'سایت-شخصی',
   },
   {
     id: 4,
     name: 'سایت دانلود فیلم',
     tags: ['HTML', 'CSS', 'PHP'],
     image: 'website_screenshot.png',
-    url: '#',
+    url: 'سایت-شخصی',
   },
 ];
 
@@ -35,7 +35,7 @@ const POSTS = [
   {
     id: 1,
     title: 'تبدیل قالب html به وردپرس با pinegrow',
-    url: '/posts/تبدیل-قالب',
+    url: 'تبدیل-قالب',
     img: 'post.jpg',
     date: '1403/07/06',
     commentCount: 10,
@@ -43,7 +43,7 @@ const POSTS = [
   {
     id: 2,
     title: 'تبدیل قالب html به وردپرس با pinegrow',
-    url: '/posts/تبدیل-قالب',
+    url: 'تبدیل-قالب',
     img: 'post.jpg',
     date: '1403/07/06',
     commentCount: 10,
@@ -51,7 +51,7 @@ const POSTS = [
   {
     id: 3,
     title: 'تبدیل قالب html به وردپرس با pinegrow',
-    url: '/posts/تبدیل-قالب',
+    url: 'تبدیل-قالب',
     img: 'post.jpg',
     date: '1403/07/06',
     commentCount: 10,
@@ -59,7 +59,7 @@ const POSTS = [
   {
     id: 4,
     title: 'تبدیل قالب html به وردپرس با pinegrow',
-    url: '/posts/تبدیل-قالب',
+    url: 'تبدیل-قالب',
     img: 'post.jpg',
     date: '1403/07/06',
     commentCount: 10,
@@ -70,7 +70,7 @@ const PRODUCTS = [
   {
     id: 1,
     title: 'قالب شخصی حرفه ای',
-    url: '#',
+    url: 'قالب-شخصی-حرفه-ای',
     img: 'product.jpg',
     date: '1403/07/06',
     commentCount: 10,
@@ -79,7 +79,7 @@ const PRODUCTS = [
   {
     id: 2,
     title: 'قالب شخصی حرفه ای',
-    url: '#',
+    url: 'قالب-شخصی-حرفه-ای',
     img: 'product.jpg',
     date: '1403/07/06',
     commentCount: 10,
@@ -88,7 +88,7 @@ const PRODUCTS = [
   {
     id: 3,
     title: 'قالب شخصی حرفه ای',
-    url: '#',
+    url: 'قالب-شخصی-حرفه-ای',
     img: 'product.jpg',
     date: '1403/07/06',
     commentCount: 10,
@@ -97,7 +97,7 @@ const PRODUCTS = [
   {
     id: 4,
     title: 'قالب شخصی حرفه ای',
-    url: '#',
+    url: 'قالب-شخصی-حرفه-ای',
     img: 'product.jpg',
     date: '1403/07/06',
     commentCount: 10,

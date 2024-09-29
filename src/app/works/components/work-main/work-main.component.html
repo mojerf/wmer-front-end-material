@@ -9,7 +9,9 @@
             alt="{{ work.name }}"
             class="work-image"
           />
-          <div class="work-title">{{ work.name }}</div>
+          <div class="work-title">
+            <a routerLink="/works/{{ work.url }}">{{ work.name }}</a>
+          </div>
           <div class="work-tags">
             <mat-chip-set>
               @for (tag of work.tags; track $index) {
