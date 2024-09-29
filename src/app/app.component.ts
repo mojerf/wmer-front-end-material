@@ -14,13 +14,13 @@ const MENU = [
     exact: false,
   },
   {
-    url: '#',
+    url: 'posts',
     icon: 'description',
     name: 'نوشته ها',
     exact: false,
   },
   {
-    url: '#',
+    url: 'store',
     icon: 'store',
     name: 'فروشگاه',
     exact: false,
@@ -33,9 +33,6 @@ const MENU = [
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  showNewName($event: Event) {
-    console.log($event);
-  }
   menu = MENU;
   logoUrl = 'logo-l.png';
   titleName = 'مجتبی عرفان راد';
@@ -44,6 +41,10 @@ export class AppComponent {
   pageTitle = 'صفحه اصلی';
 
   showFiller = false;
+
+  onActivate($event: { title: string }) {
+    this.pageTitle = $event.title;
+  }
 
   toggleTheme() {
     const bodyElement = document.getElementsByTagName('body')[0];

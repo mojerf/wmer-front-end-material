@@ -63,12 +63,13 @@
           }
         }
         .works-container {
-          display: flex;
-          justify-content: space-around;
+          display: grid;
+          gap: 1rem;
+          grid-template-columns: auto auto auto auto;
 
           .work-card {
             position: relative;
-            width: 17.5rem;
+            width: 100%;
             border-radius: 0.5rem;
             background-color: var(--card-image-bg);
             box-shadow: var(--small-shadow);
@@ -118,11 +119,12 @@
           }
         }
         .posts-container {
-          display: flex;
-          justify-content: space-around;
+          display: grid;
+          gap: 1rem;
+          grid-template-columns: auto auto auto auto;
 
           .post-card {
-            width: 17.5rem;
+            width: 100%;
             border-radius: 0.5rem;
             display: flex;
             flex-direction: column;
@@ -137,8 +139,7 @@
             .post-detail {
               padding: 0.75rem;
               text-align: center;
-              display: flex;
-              flex-direction: column;
+              display: grid;
               gap: 1rem;
 
               .post-title {
@@ -191,11 +192,12 @@
           }
         }
         .store-container {
-          display: flex;
-          justify-content: space-around;
+          display: grid;
+          gap: 1rem;
+          grid-template-columns: auto auto auto auto;
 
           .product-card {
-            width: 17.5rem;
+            width: 100%;
             border-radius: 0.5rem;
             display: flex;
             flex-direction: column;
@@ -210,8 +212,7 @@
             .product-detail {
               padding: 0.75rem;
               text-align: center;
-              display: flex;
-              flex-direction: column;
+              display: grid;
               gap: 1rem;
 
               .product-title {
