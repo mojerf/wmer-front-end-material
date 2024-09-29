@@ -1,1 +1,24 @@
-<p>post-page works!</p>
+<div class="card">
+  <div class="post">
+    <div>
+      <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image" />
+    </div>
+    <div class="details">
+      <div class="icon-details">
+        <span class="icon-details-component">
+          <span class="material-symbols-rounded"> person </span>
+          <span class="text">{{ post.author }}</span>
+        </span>
+        <span class="icon-details-component">
+          <span class="material-symbols-rounded"> calendar_today </span>
+          <span class="text">{{ post.date }}</span>
+        </span>
+        <span class="icon-details-component">
+          <span class="material-symbols-rounded"> forum </span>
+          <span class="text">{{ post.commentCount }}</span>
+        </span>
+      </div>
+      <div id="post-text" class="post-text"></div>
+    </div>
+  </div>
+</div>

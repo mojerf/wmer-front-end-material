@@ -35,6 +35,7 @@
           .description {
             font-weight: lighter;
             font-size: 0.85rem;
+            color: var(--secondary-text-color);
           }
         }
       }
@@ -114,12 +115,25 @@
 
       .outlet-content {
         padding-block-start: 2.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .main-container {
+          width: 77.5rem;
+
+          .card {
+            border-radius: 1.5rem;
+            background: var(--card-background);
+            padding: 2rem;
+            box-shadow: var(--small-shadow);
+          }
+        }
       }
     }
 
     .footer {
-      padding: 2.5rem;
-      padding-bottom: 0;
+      padding: 0 2.5rem;
 
       .footer-container {
         background-color: var(--mat-sidenav-container-background-color);

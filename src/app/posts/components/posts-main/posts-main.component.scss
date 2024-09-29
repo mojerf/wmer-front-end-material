@@ -1,83 +1,64 @@
 :host {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  .posts {
+    width: 100%;
 
-  .container {
-    max-width: 77.5rem;
+    .posts-container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: auto auto auto auto;
 
-    .card {
-      border-radius: 1.5rem;
-      background: var(--card-background);
-      padding: 2rem;
-      box-shadow: var(--small-shadow);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 2.5rem;
-
-      .posts {
+      .post-card {
         width: 100%;
+        border-radius: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--card-border-color);
 
-        .posts-container {
+        .post-image {
+          width: 100%;
+          border-start-start-radius: inherit;
+          border-start-end-radius: inherit;
+        }
+
+        .post-detail {
+          padding: 0.75rem;
+          text-align: center;
           display: grid;
           gap: 1rem;
-          grid-template-columns: auto auto auto auto;
 
-          .post-card {
-            width: 100%;
-            border-radius: 0.75rem;
+          .post-title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .post-footer {
             display: flex;
-            flex-direction: column;
-            border: 1px solid var(--card-border-color);
+            gap: 0.75rem;
+            font-size: 0.75rem;
+            color: var(--secondary-text-color);
 
-            .post-image {
-              width: 100%;
-              border-start-start-radius: inherit;
-              border-start-end-radius: inherit;
-            }
+            .post-footer-component {
+              display: flex;
+              gap: 0.25rem;
+              justify-content: center;
+              align-items: center;
 
-            .post-detail {
-              padding: 0.75rem;
-              text-align: center;
-              display: grid;
-              gap: 1rem;
-
-              .post-title {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
+              .text {
+                height: 1rem;
               }
 
-              .post-footer {
-                display: flex;
-                gap: 0.75rem;
-                font-size: 0.75rem;
-
-                .post-footer-component {
-                  display: flex;
-                  gap: 0.25rem;
-                  justify-content: center;
-                  align-items: center;
-
-                  .text {
-                    height: 1rem;
-                  }
-
-                  .material-symbols-rounded {
-                    font-size: 1rem;
-                  }
-                }
+              .material-symbols-rounded {
+                font-size: 1rem;
               }
             }
           }
         }
-
-        .paginator {
-          padding-top: 1.5rem;
-        }
       }
+    }
+
+    .paginator {
+      padding-top: 1.5rem;
     }
   }
 }
