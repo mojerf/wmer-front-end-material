@@ -1,0 +1,49 @@
+<div class="card">
+  <section class="product-details">
+    <div>
+      <img
+        src="{{ product.image }}"
+        alt="{{ product.title }}"
+        class="product-image"
+      />
+    </div>
+    <div class="details">
+      <div class="icon-details">
+        <span class="icon-details-component">
+          <span class="material-symbols-rounded"> person </span>
+          <span class="text">{{ product.author }}</span>
+        </span>
+        <span class="icon-details-component">
+          <span class="material-symbols-rounded"> calendar_today </span>
+          <span class="text">{{ product.date }}</span>
+        </span>
+        <span class="icon-details-component">
+          <span class="material-symbols-rounded"> forum </span>
+          <span class="text">{{ product.commentCount }}</span>
+        </span>
+      </div>
+      <p>{{ product.shortDetail }}</p>
+      <div class="price">
+        <p>قیمت :</p>
+        <h2>
+          <strong>{{ product.price.toLocaleString() }} تومان</strong>
+        </h2>
+        @if (product.priceBefore) {
+        <h3 class="discount">
+          <s>{{ product.priceBefore.toLocaleString() }} تومان</s>
+        </h3>
+        }
+      </div>
+      <div class="buy-button">
+        <button mat-flat-button matTooltip="" matTooltipPosition="above">
+          <div class="buy-button-text">
+            <span class="price">اضافه کردن به سبد خرید</span>
+            <span class="material-symbols-rounded"> shopping_cart </span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <div [innerHTML]="product.description" class="product-text"></div>
+</div>

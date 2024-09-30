@@ -1,0 +1,52 @@
+<div class="card">
+  <section class="details-container">
+    <div>
+      <img src="{{ work.image }}" alt="{{ work.title }}" class="top-image" />
+    </div>
+    <div class="details">
+      <div class="publish-date">
+        <strong>زمان پروژه : </strong>
+        <span>{{ work.timeline }}</span>
+      </div>
+      <div class="date">
+        <strong>انتشار : </strong>
+        <span>{{ work.publishDate }}</span>
+      </div>
+      <div class="tags">
+        <strong> زبان/فریمورک استفاده شده : </strong>
+        <mat-chip-set>
+          @for (tag of work.tags; track $index) {
+          <mat-chip>{{ tag }}</mat-chip>
+          }
+        </mat-chip-set>
+      </div>
+      <div class="role">
+        <strong>جایگاه من : </strong>
+        <span>{{ work.role }}</span>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section class="description">
+    <div id="overview">
+      <h3>خلاصه مطلب</h3>
+      <div [innerHTML]="work.overview"></div>
+    </div>
+    <div id="learn">
+      <h3>چی یاد گرفتم؟</h3>
+      <div [innerHTML]="work.learn"></div>
+    </div>
+    <div id="picture">
+      <h3>عکس کامل پروژه</h3>
+      <img
+        src="{{ work.fullImage }}"
+        alt="{{ work.title }}"
+        class="full-picture"
+      />
+    </div>
+    <div id="description">
+      <h3>توضیحات</h3>
+      <div [innerHTML]="work.description"></div>
+    </div>
+  </section>
+</div>

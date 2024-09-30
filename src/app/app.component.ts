@@ -40,10 +40,12 @@ export class AppComponent {
   themeIcon = 'contrast';
   pageTitle = 'صفحه اصلی';
 
-  showFiller = false;
+  needCard = true;
 
-  onActivate($event: { title: string }) {
+  onActivate($event: { title: string; needCard?: boolean }) {
     this.pageTitle = $event.title;
+    this.needCard =
+      $event.needCard || $event.needCard === false ? $event.needCard : true;
   }
 
   toggleTheme() {

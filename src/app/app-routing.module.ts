@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from './main/components/main-page/main-page.component';
-import { WorkMainComponent } from './works/components/work-main/work-main.component';
-import { StoreMainComponent } from './store/components/store-main/store-main.component';
-import { PostsMainComponent } from './posts/components/posts-main/posts-main.component';
 
 const routes: Routes = [
   {
@@ -13,18 +10,21 @@ const routes: Routes = [
   },
   {
     path: 'works',
-    component: WorkMainComponent,
     title: 'مجتبی عرفان راد | نمونه کار ها',
+    loadChildren: () =>
+      import('./works/works.module').then((m) => m.WorksModule),
   },
   {
     path: 'posts',
-    component: PostsMainComponent,
     title: 'مجتبی عرفان راد | نوشته ها',
+    loadChildren: () =>
+      import('./posts/posts.module').then((m) => m.PostsModule),
   },
   {
     path: 'store',
-    component: StoreMainComponent,
     title: 'مجتبی عرفان راد | فروشگاه',
+    loadChildren: () =>
+      import('./store/store.module').then((m) => m.StoreModule),
   },
 ];
 @NgModule({

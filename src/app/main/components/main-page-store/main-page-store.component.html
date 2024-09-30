@@ -1,0 +1,40 @@
+
+<section class="store">
+    <div class="store-title-container">
+      <a routerLink="/store" class="store-title">
+        فروشگاه
+        <span class="material-symbols-rounded"> arrow_left_alt </span>
+      </a>
+    </div>
+    <div class="store-container">
+      @for (product of products; track $index) {
+      <div class="product-card">
+        <img src="{{ product.image }}" alt="" class="product-image" />
+        <div class="product-detail">
+          <h4
+            class="product-title"
+            matTooltip="{{ product.title }}"
+            matTooltipPosition="above"
+          >
+            {{ product.title }}
+          </h4>
+          <a routerLink="/store/{{ product.url }}" mat-flat-button>نمایش محصول</a>
+          <div class="product-footer">
+            <span class="product-footer-component">
+              <span class="material-symbols-rounded"> calendar_today </span>
+              <span class="text">{{ product.date }}</span>
+            </span>
+            <span class="product-footer-component">
+              <span class="material-symbols-rounded"> forum </span>
+              <span class="text">{{ product.commentCount }}</span>
+            </span>
+            <span class="product-footer-component">
+              <span class="material-symbols-rounded"> payments </span>
+              <span class="text">{{ product.price.toLocaleString() }} تومان</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </section>

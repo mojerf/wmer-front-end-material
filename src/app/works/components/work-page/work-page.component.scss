@@ -1,0 +1,58 @@
+:host {
+  width: 100%;
+
+  .card {
+    border-radius: 1.5rem;
+    background: var(--card-background);
+    padding: 2rem;
+    box-shadow: var(--small-shadow);
+
+    .details-container {
+      display: flex;
+      width: 100%;
+      gap: 2rem;
+      padding-block-end: 1.5rem;
+
+      .top-image {
+        border-radius: 1rem;
+        box-shadow: var(--small-shadow);
+        width: 20rem;
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+
+        .tags {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+    }
+
+    hr {
+      border-style: dashed;
+    }
+
+    .description {
+      padding-block-start: 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-direction: column;
+
+      h3 {
+        font-size: 1.35rem;
+        padding-block-end: 0.25rem;
+      }
+
+      .full-picture {
+        border-radius: 1rem;
+        box-shadow: var(--small-shadow);
+        width: 100%;
+      }
+    }
+  }
+}

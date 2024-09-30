@@ -54,7 +54,21 @@
       </div>
       <mat-divider></mat-divider>
       <div class="outlet-content">
-        <router-outlet (activate)="onActivate($event)"></router-outlet>
+        <div class="main-container">
+          @if(needCard){
+          <div class="card">
+            <router-outlet
+              (activate)="onActivate($event)"
+              class="router-outlet"
+            ></router-outlet>
+          </div>
+          }@else{
+          <router-outlet
+            (activate)="onActivate($event)"
+            class="router-outlet"
+          ></router-outlet
+          >}
+        </div>
       </div>
     </main>
     <footer class="footer">

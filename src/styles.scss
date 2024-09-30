@@ -15,16 +15,21 @@
 
   --small-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07),
     0 10px 20px -2px rgba(0, 0, 0, 0.04);
+  --secondary-text-color: #c7c6ca;
 
   body[data-theme="light"] {
     @include mat.all-component-colors(theme.$light-theme);
 
+    --mat-app-text-color: #2e3038;
+    --mat-sidenav-content-text-color: #3a3b43;
     --mat-sidenav-content-background-color: #efedf1;
     --mat-sidenav-container-background-color: #f2f0f4;
 
     --card-background: #f2f0f4;
     --card-image-bg: #fff;
     --card-border-color: #acaaaf;
+
+    --secondary-text-color: #51525b;
   }
 }
 

@@ -7,9 +7,15 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AppRoutingModule } from '../app-routing.module';
+import { MainPageAboutComponent } from './components/main-page-about/main-page-about.component';
+import { MainPageWorksComponent } from './components/main-page-works/main-page-works.component';
+import { MainPagePostsComponent } from './components/main-page-posts/main-page-posts.component';
+import { MainPageStoreComponent } from './components/main-page-store/main-page-store.component';
+import { MainPageContactComponent } from './components/main-page-contact/main-page-contact.component';
 
 @NgModule({
-  declarations: [MainPageComponent],
+  declarations: [MainPageComponent, MainPageAboutComponent, MainPageWorksComponent, MainPagePostsComponent, MainPageStoreComponent, MainPageContactComponent],
   imports: [
     CommonModule,
     MatChipsModule,
@@ -17,6 +23,7 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    AppRoutingModule,
   ],
 })
 export class MainModule {}

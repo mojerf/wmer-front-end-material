@@ -1,83 +1,64 @@
 :host {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  .store {
+    width: 100%;
 
-  .container {
-    max-width: 77.5rem;
+    .store-container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: auto auto auto auto;
 
-    .card {
-      border-radius: 1.5rem;
-      background: var(--card-background);
-      padding: 2rem;
-      box-shadow: var(--small-shadow);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 2.5rem;
-
-      .store {
+      .product-card {
         width: 100%;
+        border-radius: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--card-border-color);
 
-        .store-container {
+        .product-image {
+          width: 100%;
+          border-start-start-radius: inherit;
+          border-start-end-radius: inherit;
+        }
+
+        .product-detail {
+          padding: 0.75rem;
+          text-align: center;
           display: grid;
           gap: 1rem;
-          grid-template-columns: auto auto auto auto;
 
-          .product-card {
-            width: 100%;
-            border-radius: 0.5rem;
+          .product-title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .product-footer {
             display: flex;
-            flex-direction: column;
-            border: 1px solid var(--card-border-color);
+            gap: 0.75rem;
+            font-size: 0.75rem;
+            color: var(--secondary-text-color);
 
-            .product-image {
-              width: 100%;
-              border-start-start-radius: inherit;
-              border-start-end-radius: inherit;
-            }
+            .product-footer-component {
+              display: flex;
+              gap: 0.25rem;
+              justify-content: center;
+              align-items: center;
 
-            .product-detail {
-              padding: 0.75rem;
-              text-align: center;
-              display: grid;
-              gap: 1rem;
-
-              .product-title {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
+              .text {
+                height: 1rem;
               }
 
-              .product-footer {
-                display: flex;
-                gap: 0.75rem;
-                font-size: 0.75rem;
-
-                .product-footer-component {
-                  display: flex;
-                  gap: 0.25rem;
-                  justify-content: center;
-                  align-items: center;
-
-                  .text {
-                    height: 1rem;
-                  }
-
-                  .material-symbols-rounded {
-                    font-size: 1rem;
-                  }
-                }
+              .material-symbols-rounded {
+                font-size: 1rem;
               }
             }
           }
         }
-
-        .paginator {
-          padding-top: 1.5rem;
-        }
       }
+    }
+
+    .paginator {
+      padding-top: 1.5rem;
     }
   }
 }

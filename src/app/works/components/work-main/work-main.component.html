@@ -1,26 +1,20 @@
-<div class="container">
-  <div class="card">
-    <div class="works">
-      <div class="works-container">
-        @for (work of works; track $index) {
-        <div class="work-card">
-          <img
-            src="{{ work.image }}"
-            alt="{{ work.name }}"
-            class="work-image"
-          />
-          <div class="work-title">{{ work.name }}</div>
-          <div class="work-tags">
-            <mat-chip-set>
-              @for (tag of work.tags; track $index) {
-              <mat-chip>{{ tag }}</mat-chip
-              >}
-            </mat-chip-set>
-          </div>
-        </div>
-        }
+<div class="works">
+  <div class="works-container">
+    @for (work of works; track $index) {
+    <div class="work-card">
+      <img src="{{ work.image }}" alt="{{ work.name }}" class="work-image" />
+      <div class="work-title">
+        <a routerLink="/works/{{ work.url }}">{{ work.name }}</a>
       </div>
-      <app-paginator class="paginator"></app-paginator>
+      <div class="work-tags">
+        <mat-chip-set>
+          @for (tag of work.tags; track $index) {
+          <mat-chip>{{ tag }}</mat-chip
+          >}
+        </mat-chip-set>
+      </div>
     </div>
+    }
   </div>
+  <app-paginator class="paginator"></app-paginator>
 </div>

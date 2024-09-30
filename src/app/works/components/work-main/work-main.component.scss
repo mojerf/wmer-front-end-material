@@ -1,66 +1,46 @@
 :host {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  .works {
+    width: 100%;
 
-  .container {
-    max-width: 77.5rem;
+    .works-container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: auto auto auto auto;
 
-    .card {
-      border-radius: 1.5rem;
-      background: var(--card-background);
-      padding: 2rem;
-      box-shadow: var(--small-shadow);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 2.5rem;
-
-      .works {
+      .work-card {
+        position: relative;
         width: 100%;
+        border-radius: 0.75rem;
+        background-color: var(--card-image-bg);
+        box-shadow: var(--small-shadow);
+        display: flex;
 
-        .works-container {
-          display: grid;
-          gap: 1rem;
-          grid-template-columns: auto auto auto auto;
-
-          .work-card {
-            position: relative;
-            width: 100%;
-            border-radius: 0.5rem;
-            background-color: var(--card-image-bg);
-            box-shadow: var(--small-shadow);
-            display: flex;
-
-            .work-image {
-              width: 100%;
-              border-radius: inherit;
-              opacity: 0.3;
-            }
-
-            .work-title {
-              position: absolute;
-              font-weight: bold;
-              top: 1.5rem;
-              width: 100%;
-              text-align: center;
-            }
-
-            .work-tags {
-              width: 100%;
-              bottom: 0.75rem;
-              position: absolute;
-              left: 1rem;
-              direction: ltr;
-            }
-          }
+        .work-image {
+          width: 100%;
+          border-radius: inherit;
+          opacity: 0.3;
         }
 
-        .paginator {
-          padding-top: 1.5rem;
+        .work-title {
+          position: absolute;
+          font-weight: bold;
+          top: 1.5rem;
+          width: 100%;
+          text-align: center;
+        }
+
+        .work-tags {
+          width: 100%;
+          bottom: 0.75rem;
+          position: absolute;
+          left: 1rem;
+          direction: ltr;
         }
       }
+    }
+
+    .paginator {
+      padding-top: 1.5rem;
     }
   }
 }
