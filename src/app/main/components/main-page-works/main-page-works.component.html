@@ -1,0 +1,25 @@
+<section class="works">
+  <div class="works-title-container">
+    <a routerLink="/works" class="works-title">
+      نمونه کار ها
+      <span class="material-symbols-rounded"> arrow_left_alt </span>
+    </a>
+  </div>
+  <div class="works-container">
+    @for (work of works; track $index) {
+    <div class="work-card">
+      <img src="{{ work.image }}" alt="{{ work.title }}" class="work-image" />
+      <div class="work-title">
+        <a routerLink="/works/{{ work.url }}"> {{ work.title }}</a>
+      </div>
+      <div class="work-tags">
+        <mat-chip-set>
+          @for (tag of work.tags; track $index) {
+          <mat-chip>{{ tag }}</mat-chip
+          >}
+        </mat-chip-set>
+      </div>
+    </div>
+    }
+  </div>
+</section>

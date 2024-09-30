@@ -5,7 +5,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { SharedModule } from '../shared/shared.module';
 import { MatButtonModule } from '@angular/material/button';
 import { PostPageComponent } from './components/post-page/post-page.component';
-import { AppRoutingModule } from '../app-routing.module';
+import { PostsRoutingModule } from './posts-routing.module';
 
 @NgModule({
   declarations: [PostsMainComponent, PostPageComponent],
@@ -14,7 +14,7 @@ import { AppRoutingModule } from '../app-routing.module';
     MatTooltipModule,
     SharedModule,
     MatButtonModule,
-    AppRoutingModule,
+    PostsRoutingModule,
   ],
 })
 export class PostsModule {}

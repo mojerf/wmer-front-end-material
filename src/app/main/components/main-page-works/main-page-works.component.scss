@@ -1,0 +1,55 @@
+.works {
+  width: 100%;
+
+  .works-title-container {
+    text-align: center;
+    padding-block: 1.5rem;
+
+    .works-title {
+      border-bottom: 1px solid var(--mat-app-text-color);
+      padding-inline: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      color: var(--mat-app-text-color);
+      font-size: 1.15rem;
+      font-weight: bold;
+      padding-bottom: 0.1rem;
+    }
+  }
+  .works-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto auto auto;
+
+    .work-card {
+      position: relative;
+      width: 100%;
+      border-radius: 0.75rem;
+      background-color: var(--card-image-bg);
+      box-shadow: var(--small-shadow);
+      display: flex;
+
+      .work-image {
+        width: 100%;
+        border-radius: inherit;
+        opacity: 0.3;
+      }
+
+      .work-title {
+        position: absolute;
+        font-weight: bold;
+        top: 1.5rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .work-tags {
+        width: 100%;
+        bottom: 0.75rem;
+        position: absolute;
+        left: 1rem;
+        direction: ltr;
+      }
+    }
+  }
+}

@@ -4,10 +4,10 @@ import { WorkMainComponent } from './components/work-main/work-main.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { SharedModule } from '../shared/shared.module';
 import { WorkPageComponent } from './components/work-page/work-page.component';
-import { AppRoutingModule } from '../app-routing.module';
+import { WorksRoutingModule } from './works-routing.module';
 
 @NgModule({
   declarations: [WorkMainComponent, WorkPageComponent],
-  imports: [CommonModule, MatChipsModule, SharedModule, AppRoutingModule],
+  imports: [CommonModule, MatChipsModule, SharedModule, WorksRoutingModule],
 })
 export class WorksModule {}
