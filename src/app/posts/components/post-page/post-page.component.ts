@@ -49,7 +49,5 @@ export class PostPageComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.slug = params['slug'];
     });
-
-    document.getElementById('post-text')!.innerHTML = this.post.description;
   }
 }

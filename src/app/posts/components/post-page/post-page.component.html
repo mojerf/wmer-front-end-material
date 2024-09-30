@@ -18,7 +18,7 @@
           <span class="text">{{ post.commentCount }}</span>
         </span>
       </div>
-      <div id="post-text" class="post-text"></div>
+      <div [innerHTML]="post.description" class="post-text"></div>
     </div>
   </div>
 </div>

@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkPageComponent } from './work-page.component';
 import { RouterModule } from '@angular/router';
+import { MatChipsModule } from '@angular/material/chips';
 
 describe('WorkPageComponent', () => {
   let component: WorkPageComponent;
@@ -9,8 +10,8 @@ describe('WorkPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterModule.forRoot([])],
       declarations: [WorkPageComponent],
+      imports: [RouterModule.forRoot([]), MatChipsModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(WorkPageComponent);

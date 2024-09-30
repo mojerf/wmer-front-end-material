@@ -52,8 +52,5 @@ export class ProductPageComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.slug = params['slug'];
     });
-
-    document.getElementById('product-text')!.innerHTML =
-      this.product.description;
   }
 }
