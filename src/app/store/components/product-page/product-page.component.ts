@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../../../shared/services/basket/cart.service';
+import { fullProduct } from '../../../shared/model/cart';
 
 const PRODUCT = {
   id: 1,
@@ -40,17 +42,24 @@ const COMMENTS = [
   styleUrl: './product-page.component.scss',
 })
 export class ProductPageComponent implements OnInit {
-  product = PRODUCT;
+  product: fullProduct = PRODUCT;
   comments = COMMENTS;
   title = this.product.title;
   needCard = false;
   slug!: string;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private cartService: CartService
+  ) {}
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.slug = params['slug'];
     });
+  }
+
+  addToBasket() {
+    this.cartService.addToCart(this.product, this.slug);
   }
 }

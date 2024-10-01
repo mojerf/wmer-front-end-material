@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CartService } from './shared/services/basket/cart.service';
+import { cartItem } from './shared/model/cart';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { NotificationService } from './shared/services/notification/notification.service';
+import { NotificationComponent } from './shared/components/notification/notification.component';
 
 const MENU = [
   {
@@ -27,19 +32,20 @@ const MENU = [
   },
 ];
 
-const BASKET = [
+const BASKET: cartItem[] = [
   {
     id: 1,
-    name: 'قالب شخصی حرفه ای',
+    title: 'قالب شخصی حرفه ای',
     image: 'product.jpg',
     price: 50000,
     url: 'قالب-شخصی-حرفه-ای',
   },
   {
     id: 1,
-    name: 'قالب شخصی حرفه ای',
+    title: 'قالب شخصی حرفه ای',
     image: 'product.jpg',
     price: 50000,
+    priceBefore: 60000,
     url: 'قالب-شخصی-حرفه-ای',
   },
 ];
@@ -49,7 +55,7 @@ const BASKET = [
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   menu = MENU;
   logoUrl = 'logo-l.png';
   titleName = 'مجتبی عرفان راد';
@@ -58,8 +64,39 @@ export class AppComponent {
   pageTitle = 'صفحه اصلی';
   needCard = true;
 
-  basketItems = BASKET;
-  basketItemCount = 2;
+  basketItems: cartItem[] = BASKET;
+  basketItemCount = 0;
+
+  constructor(
+    private cartService: CartService,
+    private snackBar: MatSnackBar,
+    private notificationService: NotificationService
+  ) {}
+
+  ngOnInit(): void {
+    this.notificationService.notification$.subscribe({
+      next: (message) => {
+        this.snackBar.openFromComponent(NotificationComponent, {
+          data: message,
+          panelClass: ['notification-class-success'],
+          duration: 2000,
+        });
+      },
+      error: (message) => {
+        this.snackBar.openFromComponent(NotificationComponent, {
+          data: message,
+          panelClass: ['notification-class-danger'],
+          duration: 2000,
+        });
+      },
+    });
+
+    this.cartService.cartItems$.subscribe((data) => {
+      this.basketItems = data;
+      this.basketItemCount = data.length;
+    });
+    this.cartService.getCartItems();
+  }
 
   onActivate($event: { title: string; needCard?: boolean }) {
     this.pageTitle = $event.title;
@@ -73,5 +110,9 @@ export class AppComponent {
 
     bodyElement.dataset['theme'] = themeState === 'light' ? 'dark' : 'light';
     this.themeIcon = themeState === 'light' ? 'light_mode' : 'dark_mode';
+  }
+
+  removeFromCart(id: number) {
+    this.cartService.removeFromCart(id);
   }
 }

@@ -101,12 +101,29 @@
   <div class="basket">
     @for (product of basketItems; track product.id;let last=$last) {
     <div class="basket-item">
-      <img src="{{ product.image }}" alt="" class="product-image" />
+      <a routerLink="/store/{{ product.url }}">
+        <img src="{{ product.image }}" alt="" class="product-image" />
+      </a>
       <div class="product-details">
         <a routerLink="/store/{{ product.url }}">
-          <h3>{{ product.name }}</h3>
+          <h3>{{ product.title }}</h3>
         </a>
-        <p>{{ product.price.toLocaleString() }} تومان</p>
+        <span>
+          <p>{{ product.price.toLocaleString() }} تومان</p>
+          @if (product.priceBefore) {
+          <s>
+            <small>{{ product.priceBefore.toLocaleString() }} تومان</small>
+          </s>
+          }
+        </span>
+      </div>
+      <div class="delete-item">
+        <button
+          matTooltip="حذف از سبد خرید"
+          (click)="removeFromCart(product.id)"
+        >
+          <span class="material-symbols-rounded"> delete </span>
+        </button>
       </div>
     </div>
     @if(!last){

@@ -103,12 +103,7 @@
 
           .toolbarButton {
             display: flex;
-            padding: 0;
-            border: none;
-            background: none;
-            color: var(--mat-app-text-color);
             border-radius: 5rem;
-            cursor: pointer;
           }
         }
       }
@@ -168,6 +163,14 @@
       gap: 0.5rem;
       flex-direction: column;
       justify-content: center;
+    }
+
+    .delete-item {
+      display: flex;
+
+      button {
+        color: var(--danger-color);
+      }
     }
   }
 

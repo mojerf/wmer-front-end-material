@@ -16,6 +16,7 @@
   --small-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07),
     0 10px 20px -2px rgba(0, 0, 0, 0.04);
   --secondary-text-color: #c7c6ca;
+  --danger-color: #ff5449;
 
   body[data-theme="light"] {
     @include mat.all-component-colors(theme.$light-theme);
@@ -30,6 +31,7 @@
     --card-border-color: #acaaaf;
 
     --secondary-text-color: #51525b;
+    --danger-color: #ba1a1a;
   }
 }
 
@@ -67,6 +69,13 @@ body {
     text-decoration: none;
     color: var(--mat-app-text-color);
   }
+  button {
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--mat-app-text-color);
+    cursor: pointer;
+  }
 }
 
 .mat-mdc-button,
@@ -97,16 +106,48 @@ body {
 .mat-tooltip {
   font-family: IRANSansX !important;
 }
+
 .mat-mdc-paginator-container {
   justify-content: center !important;
 }
+
 .mat-mdc-menu-panel {
   min-width: 15rem !important;
-  max-width: 25rem !important;
+  max-width: 30rem !important;
   background-color: var(--card-background) !important;
+
   .mat-mdc-menu-content {
     font-family: IRANSansX !important;
     padding: 0;
     direction: rtl;
+    max-height: 50vh;
   }
+}
+
+.mat-badge-medium .mat-badge-content {
+  width: unset !important;
+}
+
+.notification-class-danger {
+  background-color: var(--danger-color);
+  border-radius: 0.25rem;
+}
+
+.notification-class-success {
+  background-color: #388e3c;
+  border-radius: 0.25rem;
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__label {
+  font-family: IRANSansX !important;
+  direction: rtl;
+}
+
+.info-notification {
+  background-color: var(--mdc-snackbar-container-color);
+  border-radius: 0.25rem;
+}
+
+.mat-mdc-snack-bar-container .mat-mdc-snackbar-surface {
+  background-color: inherit !important;
 }
