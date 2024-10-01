@@ -27,6 +27,23 @@ const MENU = [
   },
 ];
 
+const BASKET = [
+  {
+    id: 1,
+    name: 'قالب شخصی حرفه ای',
+    image: 'product.jpg',
+    price: 50000,
+    url: 'قالب-شخصی-حرفه-ای',
+  },
+  {
+    id: 1,
+    name: 'قالب شخصی حرفه ای',
+    image: 'product.jpg',
+    price: 50000,
+    url: 'قالب-شخصی-حرفه-ای',
+  },
+];
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -39,8 +56,10 @@ export class AppComponent {
   titleDesc = 'توسعه دهنده فول استک';
   themeIcon = 'contrast';
   pageTitle = 'صفحه اصلی';
-
   needCard = true;
+
+  basketItems = BASKET;
+  basketItemCount = 2;
 
   onActivate($event: { title: string; needCard?: boolean }) {
     this.pageTitle = $event.title;

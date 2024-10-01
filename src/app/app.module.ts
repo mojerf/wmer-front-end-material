@@ -15,6 +15,8 @@ import { WorksModule } from './works/works.module';
 import { SharedModule } from './shared/shared.module';
 import { PostsModule } from './posts/posts.module';
 import { StoreModule } from './store/store.module';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +33,8 @@ import { StoreModule } from './store/store.module';
     MatSidenavModule,
     MatTooltipModule,
     MatDividerModule,
+    MatBadgeModule,
+    MatMenuModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

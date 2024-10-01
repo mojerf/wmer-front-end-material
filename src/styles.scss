@@ -100,3 +100,13 @@ body {
 .mat-mdc-paginator-container {
   justify-content: center !important;
 }
+.mat-mdc-menu-panel {
+  min-width: 15rem !important;
+  max-width: 25rem !important;
+  background-color: var(--card-background) !important;
+  .mat-mdc-menu-content {
+    font-family: IRANSansX !important;
+    padding: 0;
+    direction: rtl;
+  }
+}

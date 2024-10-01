@@ -37,6 +37,23 @@
           <button
             type="button"
             class="toolbarButton"
+            matTooltip="سبد خرید"
+            [matMenuTriggerFor]="basket"
+          >
+            @if(basketItemCount){
+            <span
+              class="material-symbols-rounded"
+              matBadge="{{ basketItemCount }}"
+            >
+              shopping_cart
+            </span>
+            }@else {
+            <span class="material-symbols-rounded"> shopping_cart </span>
+            }
+          </button>
+          <button
+            type="button"
+            class="toolbarButton"
             (click)="toggleTheme()"
             matTooltip="تغییر تم سایت"
           >
@@ -78,3 +95,26 @@
     </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+<mat-menu #basket="matMenu">
+  @if(basketItemCount){
+  <div class="basket">
+    @for (product of basketItems; track product.id;let last=$last) {
+    <div class="basket-item">
+      <img src="{{ product.image }}" alt="" class="product-image" />
+      <div class="product-details">
+        <a routerLink="/store/{{ product.url }}">
+          <h3>{{ product.name }}</h3>
+        </a>
+        <p>{{ product.price.toLocaleString() }} تومان</p>
+      </div>
+    </div>
+    @if(!last){
+    <hr />
+    } }
+    <a href="/cart" mat-flat-button>پرداخت</a>
+  </div>
+  }@else {
+  <div class="basket">سبد خرید خالی است.</div>
+  }
+</mat-menu>
