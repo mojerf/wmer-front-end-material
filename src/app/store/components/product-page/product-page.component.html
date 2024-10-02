@@ -35,7 +35,12 @@
         }
       </div>
       <div class="buy-button">
-        <button mat-flat-button matTooltip="" matTooltipPosition="above">
+        <button
+          mat-flat-button
+          matTooltip=""
+          matTooltipPosition="above"
+          (click)="addToBasket()"
+        >
           <div class="buy-button-text">
             <span class="price">اضافه کردن به سبد خرید</span>
             <span class="material-symbols-rounded"> shopping_cart </span>

@@ -1,0 +1,45 @@
+<div class="container">
+  @if(cartItemCount){
+  <table class="table">
+    <tr>
+      <th>عکس</th>
+      <th>اسم</th>
+      <th>قیمت</th>
+      <th>حذف</th>
+    </tr>
+    @for (product of cartItems; track product.id;let last=$last) {
+    <tr>
+      <td class="image-container">
+        <a routerLink="/store/{{ product.url }}">
+          <img src="{{ product.image }}" alt="" class="product-image" />
+        </a>
+      </td>
+      <td>
+        <a routerLink="/store/{{ product.url }}">
+          <h3>{{ product.title }}</h3>
+        </a>
+      </td>
+      <td>
+        <p>{{ product.price.toLocaleString() }} تومان</p>
+        @if (product.priceBefore) {
+        <s>
+          <small>{{ product.priceBefore.toLocaleString() }} تومان</small>
+        </s>
+        }
+      </td>
+      <td>
+        <button
+          matTooltip="حذف از سبد خرید"
+          (click)="removeFromCart(product.id)"
+        >
+          <span class="material-symbols-rounded delete-button"> delete </span>
+        </button>
+      </td>
+    </tr>
+    }
+  </table>
+  <a routerLink="/cart" mat-flat-button class="purchase-button">پرداخت</a>
+  }@else {
+  <p>سبد خرید خالی است.</p>
+  }
+</div>

@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatMenuModule } from '@angular/material/menu';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -13,6 +14,7 @@ describe('AppComponent', () => {
         MatSidenavModule,
         NoopAnimationsModule,
         MatDividerModule,
+        MatMenuModule,
       ],
       declarations: [AppComponent],
     }).compileComponents();

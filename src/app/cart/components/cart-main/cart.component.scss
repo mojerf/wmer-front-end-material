@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+
+    td,
+    th {
+      padding: 0.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--mat-app-text-color);
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--border-second-bg);
+    }
+
+    .image-container {
+      width: 15%;
+
+      .product-image {
+        width: 100%;
+        box-shadow: var(--small-shadow);
+        border-radius: 0.15rem;
+      }
+    }
+
+    .delete-button {
+      color: var(--danger-color);
+    }
+  }
+
+  .purchase-button {
+    width: 7.5rem;
+  }
+}

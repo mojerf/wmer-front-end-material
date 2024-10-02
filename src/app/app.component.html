@@ -37,6 +37,23 @@
           <button
             type="button"
             class="toolbarButton"
+            matTooltip="سبد خرید"
+            [matMenuTriggerFor]="cart"
+          >
+            @if(cartItemCount){
+            <span
+              class="material-symbols-rounded"
+              matBadge="{{ cartItemCount }}"
+            >
+              shopping_cart
+            </span>
+            }@else {
+            <span class="material-symbols-rounded"> shopping_cart </span>
+            }
+          </button>
+          <button
+            type="button"
+            class="toolbarButton"
             (click)="toggleTheme()"
             matTooltip="تغییر تم سایت"
           >
@@ -78,3 +95,43 @@
     </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+<mat-menu #cart="matMenu">
+  @if(cartItemCount){
+  <div class="cart">
+    @for (product of cartItems; track product.id;let last=$last) {
+    <div class="cart-item">
+      <a routerLink="/store/{{ product.url }}">
+        <img src="{{ product.image }}" alt="" class="product-image" />
+      </a>
+      <div class="product-details">
+        <a routerLink="/store/{{ product.url }}">
+          <h3>{{ product.title }}</h3>
+        </a>
+        <span>
+          <p>{{ product.price.toLocaleString() }} تومان</p>
+          @if (product.priceBefore) {
+          <s>
+            <small>{{ product.priceBefore.toLocaleString() }} تومان</small>
+          </s>
+          }
+        </span>
+      </div>
+      <div class="delete-item">
+        <button
+          matTooltip="حذف از سبد خرید"
+          (click)="removeFromCart(product.id)"
+        >
+          <span class="material-symbols-rounded"> delete </span>
+        </button>
+      </div>
+    </div>
+    @if(!last){
+    <hr />
+    } }
+    <a routerLink="/cart" mat-flat-button>پرداخت</a>
+  </div>
+  }@else {
+  <div class="cart">سبد خرید خالی است.</div>
+  }
+</mat-menu>
