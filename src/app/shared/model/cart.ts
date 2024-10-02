@@ -1,4 +1,4 @@
-export interface cartItem {
+export interface CartItem {
   id: number;
   title: string;
   image: string;
@@ -7,7 +7,7 @@ export interface cartItem {
   url: string;
 }
 
-export interface fullProduct {
+export interface FullProduct {
   id: number;
   title: string;
   description: string;

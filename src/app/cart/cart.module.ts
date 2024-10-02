@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { CartRoutingModule } from './cart-routing.module';
 import { CartComponent } from './components/cart-main/cart.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [CartComponent],
-  imports: [CommonModule, CartRoutingModule],
+  imports: [CommonModule, CartRoutingModule,MatButtonModule],
 })
 export class CartModule {}

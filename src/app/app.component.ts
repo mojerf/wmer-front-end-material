@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from './shared/services/basket/cart.service';
-import { cartItem } from './shared/model/cart';
+import { CartItem } from './shared/model/cart';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NotificationService } from './shared/services/notification/notification.service';
 import { NotificationComponent } from './shared/components/notification/notification.component';
+import { CartService } from './shared/services/cart/cart.service';
 
 const MENU = [
   {
@@ -32,24 +32,6 @@ const MENU = [
   },
 ];
 
-const BASKET: cartItem[] = [
-  {
-    id: 1,
-    title: 'قالب شخصی حرفه ای',
-    image: 'product.jpg',
-    price: 50000,
-    url: 'قالب-شخصی-حرفه-ای',
-  },
-  {
-    id: 1,
-    title: 'قالب شخصی حرفه ای',
-    image: 'product.jpg',
-    price: 50000,
-    priceBefore: 60000,
-    url: 'قالب-شخصی-حرفه-ای',
-  },
-];
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -64,8 +46,8 @@ export class AppComponent implements OnInit {
   pageTitle = 'صفحه اصلی';
   needCard = true;
 
-  basketItems: cartItem[] = BASKET;
-  basketItemCount = 0;
+  cartItems: CartItem[] = [];
+  cartItemCount = 0;
 
   constructor(
     private cartService: CartService,
@@ -74,26 +56,19 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.notificationService.notification$.subscribe({
-      next: (message) => {
-        this.snackBar.openFromComponent(NotificationComponent, {
-          data: message,
-          panelClass: ['notification-class-success'],
-          duration: 2000,
-        });
-      },
-      error: (message) => {
-        this.snackBar.openFromComponent(NotificationComponent, {
-          data: message,
-          panelClass: ['notification-class-danger'],
-          duration: 2000,
-        });
-      },
+    this.notificationService.notification$.subscribe((notification) => {
+      this.snackBar.openFromComponent(NotificationComponent, {
+        data: notification.message,
+        panelClass: notification.isSuccess
+          ? ['notification-class-success']
+          : ['notification-class-danger'],
+        duration: 2000,
+      });
     });
 
     this.cartService.cartItems$.subscribe((data) => {
-      this.basketItems = data;
-      this.basketItemCount = data.length;
+      this.cartItems = data;
+      this.cartItemCount = data.length;
     });
     this.cartService.getCartItems();
   }

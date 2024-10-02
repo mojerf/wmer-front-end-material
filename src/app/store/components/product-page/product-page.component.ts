@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CartService } from '../../../shared/services/basket/cart.service';
-import { fullProduct } from '../../../shared/model/cart';
+import { CartService } from '../../../shared/services/cart/cart.service';
+import { FullProduct } from '../../../shared/model/cart';
 
 const PRODUCT = {
   id: 1,
@@ -42,7 +42,7 @@ const COMMENTS = [
   styleUrl: './product-page.component.scss',
 })
 export class ProductPageComponent implements OnInit {
-  product: fullProduct = PRODUCT;
+  product: FullProduct = PRODUCT;
   comments = COMMENTS;
   title = this.product.title;
   needCard = false;

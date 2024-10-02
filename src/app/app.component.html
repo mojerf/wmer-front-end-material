@@ -38,12 +38,12 @@
             type="button"
             class="toolbarButton"
             matTooltip="سبد خرید"
-            [matMenuTriggerFor]="basket"
+            [matMenuTriggerFor]="cart"
           >
-            @if(basketItemCount){
+            @if(cartItemCount){
             <span
               class="material-symbols-rounded"
-              matBadge="{{ basketItemCount }}"
+              matBadge="{{ cartItemCount }}"
             >
               shopping_cart
             </span>
@@ -96,11 +96,11 @@
   </mat-sidenav-content>
 </mat-sidenav-container>
 
-<mat-menu #basket="matMenu">
-  @if(basketItemCount){
-  <div class="basket">
-    @for (product of basketItems; track product.id;let last=$last) {
-    <div class="basket-item">
+<mat-menu #cart="matMenu">
+  @if(cartItemCount){
+  <div class="cart">
+    @for (product of cartItems; track product.id;let last=$last) {
+    <div class="cart-item">
       <a routerLink="/store/{{ product.url }}">
         <img src="{{ product.image }}" alt="" class="product-image" />
       </a>
@@ -129,9 +129,9 @@
     @if(!last){
     <hr />
     } }
-    <a href="/cart" mat-flat-button>پرداخت</a>
+    <a routerLink="/cart" mat-flat-button>پرداخت</a>
   </div>
   }@else {
-  <div class="basket">سبد خرید خالی است.</div>
+  <div class="cart">سبد خرید خالی است.</div>
   }
 </mat-menu>

@@ -17,6 +17,7 @@
     0 10px 20px -2px rgba(0, 0, 0, 0.04);
   --secondary-text-color: #c7c6ca;
   --danger-color: #ff5449;
+  --border-second-bg: #3b3b3f;
 
   body[data-theme="light"] {
     @include mat.all-component-colors(theme.$light-theme);
@@ -31,7 +32,8 @@
     --card-border-color: #acaaaf;
 
     --secondary-text-color: #51525b;
-    --danger-color: #ba1a1a;
+    --danger-color: #de3730;
+    --border-second-bg: #e4e2e6;
   }
 }
 
