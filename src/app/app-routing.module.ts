@@ -31,6 +31,12 @@ const routes: Routes = [
     title: 'مجتبی عرفان راد | سبد خرید',
     loadChildren: () => import('./cart/cart.module').then((m) => m.CartModule),
   },
+  {
+    path: 'user',
+    title: 'مجتبی عرفان راد | پنل کاربری',
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
+  },
+  { path: 'login', redirectTo: '/user/login', pathMatch: 'full' },
 ];
 @NgModule({
   imports: [
