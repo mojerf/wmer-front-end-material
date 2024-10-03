@@ -17,6 +17,7 @@ import { PostsModule } from './posts/posts.module';
 import { StoreModule } from './store/store.module';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatMenuModule } from '@angular/material/menu';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,7 +37,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatBadgeModule,
     MatMenuModule,
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [provideAnimationsAsync(), provideHttpClient(withFetch())],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

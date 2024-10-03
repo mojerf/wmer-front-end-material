@@ -11,7 +11,11 @@
     <tr>
       <td class="image-container">
         <a routerLink="/store/{{ product.url }}">
-          <img src="{{ product.image }}" alt="" class="product-image" />
+          <img
+            src="{{ product.image }}"
+            alt="{{ product.title }}"
+            class="product-image"
+          />
         </a>
       </td>
       <td>

@@ -4,7 +4,13 @@ import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent, title: 'مجتبی عرفان راد | ورود' },
+  { path: 'login', redirectTo: 'login-register', pathMatch: 'full' },
+  { path: 'register', redirectTo: 'login-register', pathMatch: 'full' },
+  {
+    path: 'login-register',
+    component: LoginComponent,
+    title: 'مجتبی عرفان راد | ورود - ثبت نام',
+  },
 ];
 
 @NgModule({
