@@ -4,6 +4,7 @@
 @include mat.core();
 
 :root {
+  direction: rtl;
   @include mat.all-component-themes(theme.$dark-theme);
 
   --mat-sidenav-content-background-color: #1f1f23;
@@ -41,16 +42,16 @@
   font-family: IRANSansX;
   font-style: normal;
   font-weight: bold;
-  src: url("fonts/woff/IRANSansX-Bold.woff") format("woff"),
-    url("fonts/woff2/IRANSansX-Bold.woff2") format("woff2");
+  src: url("/assets/fonts/woff/IRANSansX-Bold.woff") format("woff"),
+    url("/assets/fonts/woff2/IRANSansX-Bold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: IRANSansX;
   font-style: normal;
   font-weight: normal;
-  src: url("fonts/woff/IRANSansX-Regular.woff") format("woff"),
-    url("fonts/woff2/IRANSansX-Regular.woff2") format("woff2");
+  src: url("/assets/fonts/woff/IRANSansX-Regular.woff") format("woff"),
+    url("/assets/fonts/woff2/IRANSansX-Regular.woff2") format("woff2");
 }
 
 html,
@@ -62,7 +63,6 @@ body {
   background-color: var(--mat-app-background-color);
   color: var(--mat-app-text-color);
   font-family: IRANSansX, Roboto, "Helvetica Neue", sans-serif;
-  direction: rtl;
   margin: 0;
   * {
     margin: 0;

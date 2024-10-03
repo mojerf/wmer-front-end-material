@@ -39,7 +39,7 @@ const MENU = [
 })
 export class AppComponent implements OnInit {
   menu = MENU;
-  logoUrl = 'logo-l.png';
+  logoUrl = 'image/logo-l.png';
   titleName = 'مجتبی عرفان راد';
   titleDesc = 'توسعه دهنده فول استک';
   themeIcon = 'contrast';
