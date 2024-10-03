@@ -18,9 +18,13 @@ import { StoreModule } from './store/store.module';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatMenuModule } from '@angular/material/menu';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent],
   imports: [
     MainModule,
     WorksModule,
@@ -36,6 +40,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     MatDividerModule,
     MatBadgeModule,
     MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [provideAnimationsAsync(), provideHttpClient(withFetch())],
   bootstrap: [AppComponent],

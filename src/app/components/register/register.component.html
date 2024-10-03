@@ -1,0 +1,28 @@
+<form>
+  <mat-form-field appearance="fill">
+    <mat-label>ایمیل*</mat-label>
+    <input matInput />
+    <span class="material-symbols-rounded" matSuffix> mail </span>
+    <mat-hint>مثال: {{ "mail@example.com" }}</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>شماره تماس</mat-label>
+    <input matInput />
+    <span class="material-symbols-rounded" matSuffix> phone </span>
+    <mat-hint>مثال: 09123456789</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>رمز عبور*</mat-label>
+    <input matInput type="password" />
+    <span class="material-symbols-rounded" matSuffix> password </span>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>تکرار رمز عبور*</mat-label>
+    <input matInput type="password" />
+    <span class="material-symbols-rounded" matSuffix> password_2 </span>
+  </mat-form-field>
+  <div>
+    <button type="submit" mat-flat-button>ثبت نام</button>
+    <a mat-button routerLink="/login"> <u>اکانت دارم 😐</u></a>
+  </div>
+</form>
