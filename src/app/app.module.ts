@@ -22,6 +22,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent],
@@ -30,6 +31,7 @@ import { MatInputModule } from '@angular/material/input';
     WorksModule,
     PostsModule,
     StoreModule,
+    DashboardModule,
     SharedModule,
     BrowserModule,
     AppRoutingModule,

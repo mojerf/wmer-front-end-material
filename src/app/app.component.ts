@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
   titleDesc = 'توسعه دهنده فول استک';
   themeIcon = 'contrast';
   pageTitle = 'صفحه اصلی';
-  needCard = true;
+  needCard = false;
 
   cartItems: CartItem[] = [];
   cartItemCount = 0;

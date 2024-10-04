@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  grid-template-columns: 15rem auto;
+  gap: 1rem;
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--card-background);
+    box-shadow: var(--small-shadow);
+    border-radius: 1rem;
+    overflow: hidden;
+
+    .link {
+      padding-block: 1rem;
+      width: 100%;
+
+      &.active {
+        background: var(--active-link-color);
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--secondary-text-color);
+      }
+
+      .linkText {
+        display: flex;
+        gap: 0.5rem;
+        color: var(--mat-app-text-color);
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .card {
+    border-radius: 1rem;
+    background: var(--card-background);
+    padding: 1.5rem;
+    box-shadow: var(--small-shadow);
+  }
+}

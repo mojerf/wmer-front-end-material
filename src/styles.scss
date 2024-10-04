@@ -19,6 +19,7 @@
   --secondary-text-color: #c7c6ca;
   --danger-color: #ff5449;
   --border-second-bg: #3b3b3f;
+  --active-link-color: rgba(38, 103, 255, 0.3);
 
   body[data-theme="light"] {
     @include mat.all-component-colors(theme.$light-theme);
@@ -35,6 +36,7 @@
     --secondary-text-color: #51525b;
     --danger-color: #de3730;
     --border-second-bg: #e4e2e6;
+    --active-link-color: rgba(38, 103, 255, 0.2);
   }
 }
 
