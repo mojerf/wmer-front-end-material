@@ -2,7 +2,7 @@
   <mat-sidenav #drawer mode="side" position="end" opened class="sideNav">
     <header class="header">
       <div class="top-header">
-        <img src="{{ logoUrl }}" alt="" class="logo" />
+        <a routerLink="/"> <img src="{{ logoUrl }}" alt="" class="logo" /></a>
         <div class="titles">
           <span class="name">{{ titleName }}</span>
           <span class="description">{{ titleDesc }}</span>
@@ -34,6 +34,19 @@
       <div class="mainTop">
         <h1 class="title">{{ pageTitle }}</h1>
         <div class="toolbar">
+          <a class="toolbarButton" routerLink="/login" matTooltip="ورود">
+            <span class="material-symbols-rounded">account_circle</span>
+          </a>
+          <a class="toolbarButton" routerLink="/register" matTooltip="ثبت نام">
+            <span class="material-symbols-rounded">person_add</span>
+          </a>
+          <a
+            class="toolbarButton"
+            routerLink="/dashboard"
+            matTooltip="پنل کاربری"
+          >
+            <span class="material-symbols-rounded">dashboard</span>
+          </a>
           <button
             type="button"
             class="toolbarButton"
@@ -90,7 +103,11 @@
     </main>
     <footer class="footer">
       <div class="footer-container">
-        طراحی و پیاده سازی شده توسط مجتبی عرفان راد 😄💖
+        طراحی و پیاده سازی شده توسط
+        <a href="https://wmer.ir" target="_blank" rel="noopener noreferrer"
+          ><u>مجتبی عرفان راد</u></a
+        >
+        😄💖
       </div>
     </footer>
   </mat-sidenav-content>

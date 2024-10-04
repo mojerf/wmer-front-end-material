@@ -10,6 +10,7 @@ import { CartService } from '../../../shared/services/cart/cart.service';
 export class CartComponent implements OnInit {
   cartItems: CartItem[] = [];
   cartItemCount = 0;
+  sumPrice = 0;
 
   constructor(private cartService: CartService) {}
 
@@ -17,6 +18,9 @@ export class CartComponent implements OnInit {
     this.cartService.cartItems$.subscribe((data) => {
       this.cartItems = data;
       this.cartItemCount = data.length;
+      this.sumPrice = data
+        .map((x) => x.price)
+        .reduce((accumulator, current) => accumulator + current);
     });
     this.cartService.getCartItems();
   }

@@ -11,7 +11,11 @@
     <tr>
       <td class="image-container">
         <a routerLink="/store/{{ product.url }}">
-          <img src="{{ product.image }}" alt="" class="product-image" />
+          <img
+            src="{{ product.image }}"
+            alt="{{ product.title }}"
+            class="product-image"
+          />
         </a>
       </td>
       <td>
@@ -37,6 +41,10 @@
       </td>
     </tr>
     }
+    <tr>
+      <td colspan="2">جمع کل :</td>
+      <td colspan="2">{{ sumPrice.toLocaleString() }} تومان</td>
+    </tr>
   </table>
   <a routerLink="/cart" mat-flat-button class="purchase-button">پرداخت</a>
   }@else {

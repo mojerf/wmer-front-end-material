@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from './main/components/main-page/main-page.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,17 @@ const routes: Routes = [
     title: 'مجتبی عرفان راد | سبد خرید',
     loadChildren: () => import('./cart/cart.module').then((m) => m.CartModule),
   },
+  {
+    path: 'login',
+    title: 'مجتبی عرفان راد | ورود',
+    component: LoginComponent,
+  },
+  {
+    path: 'register',
+    title: 'مجتبی عرفان راد | ثبت نام',
+    component: RegisterComponent,
+  },
+  { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
 ];
 @NgModule({
   imports: [

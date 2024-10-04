@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './main-page-about.component.scss',
 })
 export class MainPageAboutComponent {
-  aboutMeImage = 'programmer.jpg';
+  aboutMeImage = 'image/programmer.jpg';
   currentYear = new Date().getFullYear();
   expYears = this.currentYear - 2015;
   age = this.currentYear - 2000;
