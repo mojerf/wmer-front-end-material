@@ -12,6 +12,10 @@ import { MatInputModule } from '@angular/material/input';
 import { OrdersComponent } from './components/orders/orders.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { DashboardWorksComponent } from './components/dashboard-works/dashboard-works.component';
+import { DashboardPostsComponent } from './components/dashboard-posts/dashboard-posts.component';
+import { DashboardProductsComponent } from './components/dashboard-products/dashboard-products.component';
+import { DashboardSalesComponent } from './components/dashboard-sales/dashboard-sales.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     DashboardTemplateComponent,
     SettingsComponent,
     OrdersComponent,
+    DashboardWorksComponent,
+    DashboardPostsComponent,
+    DashboardProductsComponent,
+    DashboardSalesComponent,
   ],
   imports: [
     CommonModule,

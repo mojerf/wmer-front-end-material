@@ -20,6 +20,7 @@
   --danger-color: #ff5449;
   --border-second-bg: #3b3b3f;
   --active-link-color: rgba(38, 103, 255, 0.3);
+  --blue-button-color: #90caf9;
 
   body[data-theme="light"] {
     @include mat.all-component-colors(theme.$light-theme);
@@ -37,6 +38,7 @@
     --danger-color: #de3730;
     --border-second-bg: #e4e2e6;
     --active-link-color: rgba(38, 103, 255, 0.2);
+    --blue-button-color: #1976d2;
   }
 }
 

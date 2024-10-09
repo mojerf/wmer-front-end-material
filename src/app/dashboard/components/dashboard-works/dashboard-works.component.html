@@ -1,0 +1,36 @@
+<div class="container">
+  @if(works.length>0){
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>عنوان</th>
+      <th>ویرایش</th>
+      <th>حذف</th>
+    </tr>
+    @for (work of works; track work.id) {
+    <tr>
+      <td>
+        {{ work.id }}
+      </td>
+      <td>
+        <a routerLink="/works/{{ work.url }}">
+          <h4>{{ work.title }}</h4>
+        </a>
+      </td>
+      <td>
+        <button matTooltip="ویرایش نمونه کار">
+          <span class="material-symbols-rounded edit-button"> edit </span>
+        </button>
+      </td>
+      <td>
+        <button matTooltip="حذف نمونه کار">
+          <span class="material-symbols-rounded delete-button"> delete </span>
+        </button>
+      </td>
+    </tr>
+    }
+  </table>
+  }@else {
+  <p>نمونه کاری یافت نشد.</p>
+  }
+</div>

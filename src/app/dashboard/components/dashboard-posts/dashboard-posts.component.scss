@@ -19,18 +19,12 @@
       border-top: 1px solid var(--mat-app-text-color);
     }
 
-    .image-container {
-      width: 15%;
-
-      .product-image {
-        width: 100%;
-        box-shadow: var(--small-shadow);
-        border-radius: 0.15rem;
-      }
+    .edit-button {
+      color: var(--blue-button-color);
     }
 
-    .download-button {
-      color: var(--blue-button-color);
+    .delete-button {
+      color: var(--danger-color);
     }
   }
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { Menu } from '../../../shared/models/menu';
 
-const MENU = [
+const MENU: Menu[] = [
   {
     url: '',
     icon: 'dashboard',
@@ -11,6 +12,30 @@ const MENU = [
     url: 'orders',
     icon: 'payments',
     name: 'سفارشات',
+    exact: false,
+  },
+  {
+    url: 'works',
+    icon: 'work',
+    name: 'نمونه کار ها',
+    exact: false,
+  },
+  {
+    url: 'posts',
+    icon: 'description',
+    name: 'نوشته ها',
+    exact: false,
+  },
+  {
+    url: 'products',
+    icon: 'store',
+    name: 'محصولات',
+    exact: false,
+  },
+  {
+    url: 'sales',
+    icon: 'monitoring',
+    name: 'فروش',
     exact: false,
   },
   {

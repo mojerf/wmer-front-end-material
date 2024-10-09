@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { CartItem } from './shared/model/cart';
+import { CartItem } from './shared/models/cart';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NotificationService } from './shared/services/notification/notification.service';
 import { NotificationComponent } from './shared/components/notification/notification.component';
 import { CartService } from './shared/services/cart/cart.service';
+import { Menu } from './shared/models/menu';
 
-const MENU = [
+const MENU: Menu[] = [
   {
     url: '',
     icon: 'home',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../../../shared/services/cart/cart.service';
-import { FullProduct } from '../../../shared/model/cart';
+import { FullProduct } from '../../../shared/models/cart';
 
 const PRODUCT = {
   id: 1,
