@@ -33,17 +33,50 @@ const routes: Routes = [
       {
         path: 'works',
         title: 'مجتبی عرفان راد | نمونه کار ها',
-        component: DashboardWorksComponent,
+        children: [
+          {
+            path: '',
+            title: 'مجتبی عرفان راد | نمونه کار ها',
+            component: DashboardWorksComponent,
+          },
+          {
+            path: 'add-work',
+            title: 'مجتبی عرفان راد | نوشته جدید',
+            component: DashboardSalesComponent,
+          },
+        ],
       },
       {
         path: 'posts',
         title: 'مجتبی عرفان راد | نوشته ها',
-        component: DashboardPostsComponent,
+        children: [
+          {
+            path: '',
+            title: 'مجتبی عرفان راد | نوشته ها',
+            component: DashboardPostsComponent,
+          },
+          {
+            path: 'add-post',
+            title: 'مجتبی عرفان راد | نوشته جدید',
+            component: DashboardSalesComponent,
+          },
+        ],
       },
       {
         path: 'products',
         title: 'مجتبی عرفان راد | محصولات',
-        component: DashboardProductsComponent,
+        children: [
+          {
+            path: '',
+            title: 'مجتبی عرفان راد | محصولات',
+            component: DashboardProductsComponent,
+          },
+          {
+            path: 'add-product',
+            title: 'مجتبی عرفان راد | نوشته جدید',
+            component: DashboardSalesComponent,
+          },
+        ],
       },
       {
         path: 'sales',

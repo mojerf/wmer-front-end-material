@@ -9,9 +9,7 @@
     </tr>
     @for (post of posts; track post.id) {
     <tr>
-      <td>
-        {{ post.id }}
-      </td>
+      <td>{{ post.id }}</td>
       <td>
         <a routerLink="/posts/{{ post.url }}">
           <h4>{{ post.title }}</h4>
@@ -33,4 +31,7 @@
   }@else {
   <p>نوشته ای یافت نشد.</p>
   }
+  <div>
+    <a routerLink="add-post" mat-flat-button>نوشته جدید</a>
+  </div>
 </div>

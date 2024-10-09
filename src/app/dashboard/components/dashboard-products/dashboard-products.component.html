@@ -9,9 +9,7 @@
     </tr>
     @for (product of products; track product.id) {
     <tr>
-      <td>
-        {{ product.id }}
-      </td>
+      <td>{{ product.id }}</td>
       <td>
         <a routerLink="/store/{{ product.url }}">
           <h4>{{ product.title }}</h4>
@@ -33,4 +31,7 @@
   }@else {
   <p>محصولی یافت نشد.</p>
   }
+  <div>
+    <a routerLink="add-product" mat-flat-button>محصول جدید</a>
+  </div>
 </div>

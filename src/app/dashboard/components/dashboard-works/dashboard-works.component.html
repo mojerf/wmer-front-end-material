@@ -9,9 +9,7 @@
     </tr>
     @for (work of works; track work.id) {
     <tr>
-      <td>
-        {{ work.id }}
-      </td>
+      <td>{{ work.id }}</td>
       <td>
         <a routerLink="/works/{{ work.url }}">
           <h4>{{ work.title }}</h4>
@@ -33,4 +31,7 @@
   }@else {
   <p>نمونه کاری یافت نشد.</p>
   }
+  <div>
+    <a routerLink="add-work" mat-flat-button>نمونه کار جدید</a>
+  </div>
 </div>
