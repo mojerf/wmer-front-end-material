@@ -1,0 +1,40 @@
+<div class="container">
+  @if(orders.length>0){
+  <table class="table">
+    <tr>
+      <th>عکس</th>
+      <th>اسم</th>
+      <th>قیمت</th>
+      <th>دانلود</th>
+    </tr>
+    @for (product of orders; track product.id) {
+    <tr>
+      <td class="image-container">
+        <a routerLink="/store/{{ product.url }}">
+          <img
+            src="{{ product.image }}"
+            alt="{{ product.title }}"
+            class="product-image"
+          />
+        </a>
+      </td>
+      <td>
+        <a routerLink="/store/{{ product.url }}">
+          <h3>{{ product.title }}</h3>
+        </a>
+      </td>
+      <td>
+        <p>{{ product.price.toLocaleString() }} تومان</p>
+      </td>
+      <td>
+        <a matTooltip="دانلود محصول" href="{{ product.downloadLink }}">
+          <span class="material-symbols-rounded"> download </span>
+        </a>
+      </td>
+    </tr>
+    }
+  </table>
+  }@else {
+  <p>سفارشی یافت نشد.</p>
+  }
+</div>

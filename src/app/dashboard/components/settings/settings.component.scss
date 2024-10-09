@@ -1,0 +1,22 @@
+:host {
+  .title {
+    padding-block-end: 1rem;
+    text-align: center;
+
+    h4 {
+      display: inline;
+      border-bottom: 1px solid;
+      padding: 0 0.5rem;
+    }
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1rem;
+  }
+
+  .password-form {
+    grid-template-columns: 1fr;
+  }
+}

@@ -8,7 +8,7 @@ const MENU = [
     exact: true,
   },
   {
-    url: 'purchase',
+    url: 'orders',
     icon: 'payments',
     name: 'سفارشات',
     exact: false,
