@@ -8,6 +8,7 @@ import { DashboardWorksComponent } from './components/dashboard-works/dashboard-
 import { DashboardPostsComponent } from './components/dashboard-posts/dashboard-posts.component';
 import { DashboardProductsComponent } from './components/dashboard-products/dashboard-products.component';
 import { DashboardSalesComponent } from './components/dashboard-sales/dashboard-sales.component';
+import { PostFormComponent } from './components/dashboard-posts/post-form/post-form.component';
 
 const routes: Routes = [
   {
@@ -58,7 +59,12 @@ const routes: Routes = [
           {
             path: 'add-post',
             title: 'مجتبی عرفان راد | نوشته جدید',
-            component: DashboardSalesComponent,
+            component: PostFormComponent,
+          },
+          {
+            path: 'edit-post/:id',
+            title: 'مجتبی عرفان راد | ویرایش  نوشته',
+            component: PostFormComponent,
           },
         ],
       },

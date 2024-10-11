@@ -16,6 +16,7 @@ import { DashboardWorksComponent } from './components/dashboard-works/dashboard-
 import { DashboardPostsComponent } from './components/dashboard-posts/dashboard-posts.component';
 import { DashboardProductsComponent } from './components/dashboard-products/dashboard-products.component';
 import { DashboardSalesComponent } from './components/dashboard-sales/dashboard-sales.component';
+import { PostFormComponent } from './components/dashboard-posts/post-form/post-form.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DashboardSalesComponent } from './components/dashboard-sales/dashboard-
     DashboardPostsComponent,
     DashboardProductsComponent,
     DashboardSalesComponent,
+    PostFormComponent,
   ],
   imports: [
     CommonModule,

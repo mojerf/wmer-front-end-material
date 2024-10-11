@@ -13,6 +13,10 @@
       text-align: center;
     }
 
+    .small-column {
+      width: 5rem;
+    }
+
     tr:nth-child(even) {
       background-color: var(--border-second-bg);
       border-bottom: 1px solid var(--mat-app-text-color);
@@ -31,6 +35,12 @@
 
     .download-button {
       color: var(--blue-button-color);
+    }
+
+    button {
+      display: flex;
+      width: 100%;
+      justify-content: center;
     }
   }
 }

@@ -2,13 +2,15 @@
   @if(orders.length>0){
   <table class="table">
     <tr>
+      <th class="small-column">ID</th>
       <th>عکس</th>
       <th>اسم</th>
       <th>قیمت</th>
-      <th>دانلود</th>
+      <th class="small-column">دانلود</th>
     </tr>
     @for (product of orders; track product.id) {
     <tr>
+      <td>{{ product.id }}</td>
       <td class="image-container">
         <a routerLink="/store/{{ product.url }}">
           <img

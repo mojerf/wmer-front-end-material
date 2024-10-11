@@ -1,0 +1,68 @@
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .formbold-file-input {
+    position: relative;
+
+    input {
+      cursor: pointer;
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    label {
+      position: relative;
+      border: 2px dashed #aaa;
+      border-radius: 6px;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+      text-align: center;
+    }
+
+    .formbold-drop-file {
+      display: block;
+      font-weight: 600;
+      color: var(--mat-sidenav-content-text-color);
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .formbold-or {
+      font-weight: 500;
+      font-size: 16px;
+      color: #6b7280;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .formbold-browse {
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--mat-sidenav-content-text-color);
+      display: inline-block;
+      padding: 8px 28px;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+    }
+
+    &.isHighlighted {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .wrong-format {
+      border: 2px dashed #f44336 !important;
+    }
+  }
+
+  .divider {
+    padding: 0.65rem;
+  }
+}

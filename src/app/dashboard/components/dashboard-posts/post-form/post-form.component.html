@@ -1,0 +1,44 @@
+<form>
+  <div
+    (dragover)="highlight()"
+    (dragleave)="unhighlight()"
+    [classList]="
+      isHighlighted
+        ? 'isHighlighted formbold-file-input'
+        : 'formbold-file-input'
+    "
+  >
+    <input
+      type="file"
+      name="file"
+      id="file"
+      accept="image/*"
+      (change)="readFile($event)"
+    />
+    <label
+      for="file"
+      (drop)="readFile($event)"
+      [class.wrong-format]="wrongFormat"
+    >
+      @if (isHighlighted) {
+      <div>
+        <span class="formbold-drop-file"> عکس را اینجا رها کنید </span>
+      </div>
+      } @else {
+      <div>
+        <span class="formbold-drop-file"> عکس را اینجا رها کنید </span>
+        <span class="formbold-or"> یا </span>
+        <span class="formbold-browse"> فایل را انتخاب کنید </span>
+      </div>
+      }
+    </label>
+  </div>
+  <div class="divider"></div>
+  <mat-form-field appearance="fill">
+    <mat-label>عنوان نوشته</mat-label>
+    <input matInput [value]="title" />
+  </mat-form-field>
+  <div class="buttons">
+    <button type="submit" mat-flat-button>ثبت</button>
+  </div>
+</form>
