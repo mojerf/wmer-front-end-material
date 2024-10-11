@@ -5,6 +5,7 @@ import { NotificationService } from './shared/services/notification/notification
 import { NotificationComponent } from './shared/components/notification/notification.component';
 import { CartService } from './shared/services/cart/cart.service';
 import { Menu } from './shared/models/menu';
+import { ThemeService } from './shared/services/theme/theme.service';
 
 const MENU: Menu[] = [
   {
@@ -53,7 +54,8 @@ export class AppComponent implements OnInit {
   constructor(
     private cartService: CartService,
     private snackBar: MatSnackBar,
-    private notificationService: NotificationService
+    private notificationService: NotificationService,
+    private themeService: ThemeService
   ) {}
 
   ngOnInit(): void {
@@ -85,6 +87,7 @@ export class AppComponent implements OnInit {
     const themeState = bodyElement.dataset['theme'];
 
     bodyElement.dataset['theme'] = themeState === 'light' ? 'dark' : 'light';
+    this.themeService.setTheme(themeState === 'light' ? true : false);
     this.themeIcon = themeState === 'light' ? 'light_mode' : 'dark_mode';
   }
 

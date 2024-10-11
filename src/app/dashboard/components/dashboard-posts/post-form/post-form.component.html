@@ -33,11 +33,25 @@
       }
     </label>
   </div>
+
   <div class="divider"></div>
+
   <mat-form-field appearance="fill">
     <mat-label>عنوان نوشته</mat-label>
     <input matInput [value]="title" />
   </mat-form-field>
+
+  @if (show) {
+  <editor
+    apiKey="yjcaoq9hsst3klf39jp2da6lj47f25of83co4snoyixvmywr"
+    [init]="init"
+    [initialValue]="initialValue"
+  >
+  </editor>
+  }
+
+  <div class="divider"></div>
+
   <div class="buttons">
     <button type="submit" mat-flat-button>ثبت</button>
   </div>

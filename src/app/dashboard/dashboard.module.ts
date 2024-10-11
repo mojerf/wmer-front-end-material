@@ -17,6 +17,7 @@ import { DashboardPostsComponent } from './components/dashboard-posts/dashboard-
 import { DashboardProductsComponent } from './components/dashboard-products/dashboard-products.component';
 import { DashboardSalesComponent } from './components/dashboard-sales/dashboard-sales.component';
 import { PostFormComponent } from './components/dashboard-posts/post-form/post-form.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { PostFormComponent } from './components/dashboard-posts/post-form/post-f
     MatInputModule,
     MatTableModule,
     MatTooltipModule,
+    EditorModule,
   ],
 })
 export class DashboardModule {}
