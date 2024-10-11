@@ -10,6 +10,7 @@ import { DashboardProductsComponent } from './components/dashboard-products/dash
 import { DashboardSalesComponent } from './components/dashboard-sales/dashboard-sales.component';
 import { PostFormComponent } from './components/dashboard-posts/post-form/post-form.component';
 import { ProductFormComponent } from './components/dashboard-products/product-form/product-form.component';
+import { WorkFormComponent } from './components/dashboard-works/work-form/work-form.component';
 
 const routes: Routes = [
   {
@@ -43,8 +44,13 @@ const routes: Routes = [
           },
           {
             path: 'add-work',
-            title: 'مجتبی عرفان راد | نوشته جدید',
-            component: DashboardSalesComponent,
+            title: 'مجتبی عرفان راد | نمونه کار جدید',
+            component: WorkFormComponent,
+          },
+          {
+            path: 'edit-work/:id',
+            title: 'مجتبی عرفان راد | ویرایش نمونه کار',
+            component: WorkFormComponent,
           },
         ],
       },

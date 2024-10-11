@@ -20,6 +20,8 @@ import { PostFormComponent } from './components/dashboard-posts/post-form/post-f
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { ProductFormComponent } from './components/dashboard-products/product-form/product-form.component';
 import { FormsModule } from '@angular/forms';
+import { WorkFormComponent } from './components/dashboard-works/work-form/work-form.component';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { FormsModule } from '@angular/forms';
     DashboardSalesComponent,
     PostFormComponent,
     ProductFormComponent,
+    WorkFormComponent,
   ],
   imports: [
     CommonModule,
@@ -45,6 +48,7 @@ import { FormsModule } from '@angular/forms';
     MatTooltipModule,
     EditorModule,
     FormsModule,
+    MatChipsModule,
   ],
 })
 export class DashboardModule {}

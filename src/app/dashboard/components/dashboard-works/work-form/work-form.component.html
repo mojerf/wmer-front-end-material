@@ -1,0 +1,126 @@
+<div class="container">
+  <div
+    (dragover)="highlight()"
+    (dragleave)="unhighlight()"
+    [classList]="
+      isHighlighted
+        ? 'isHighlighted formbold-file-input'
+        : 'formbold-file-input'
+    "
+  >
+    <input
+      type="file"
+      name="file"
+      id="file"
+      accept="image/*"
+      (change)="readFile($event)"
+    />
+    <label
+      for="file"
+      (drop)="readFile($event)"
+      [class.wrong-format]="wrongFormat"
+    >
+      @if (isHighlighted) {
+      <div>
+        <span class="formbold-drop-file"> عکس را اینجا رها کنید </span>
+      </div>
+      } @else {
+      <div>
+        <span class="formbold-drop-file"> عکس را اینجا رها کنید </span>
+        <span class="formbold-or"> یا </span>
+        <span class="formbold-browse"> فایل را انتخاب کنید </span>
+      </div>
+      }
+    </label>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="double-input">
+    <mat-form-field appearance="fill">
+      <mat-label>عنوان</mat-label>
+      <input
+        matInput
+        [(ngModel)]="title"
+        (ngModelChange)="titleChange($event)"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>لینک</mat-label>
+      <input matInput [(ngModel)]="slug" />
+    </mat-form-field>
+  </div>
+
+  <div class="triple-input">
+    <mat-form-field appearance="fill">
+      <mat-label>زمان پروژه</mat-label>
+      <input matInput [value]="time" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>تاریخ انتشار</mat-label>
+      <input matInput [value]="publish" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>جایگاه من</mat-label>
+      <input matInput [value]="role" />
+    </mat-form-field>
+  </div>
+
+  <mat-form-field class="example-chip-list">
+    <mat-label>زبان/فریمورک استفاده شده</mat-label>
+    <mat-chip-grid #chipGrid aria-label="Enter fruits">
+      @for (tag of tags; track tag) {
+      <mat-chip-row
+        (removed)="remove(tag)"
+        [editable]="true"
+        (edited)="edit(tag, $event)"
+      >
+        {{ tag }}
+        <button matChipRemove>
+          <span class="material-symbols-rounded"> cancel </span>
+        </button>
+      </mat-chip-row>
+      }
+      <input
+        placeholder="زبان/فریمورک جدید ..."
+        [matChipInputFor]="chipGrid"
+        (matChipInputTokenEnd)="add($event)"
+      />
+    </mat-chip-grid>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>خلاصه مطلب</mat-label>
+    <textarea matInput>{{ expert }}</textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>چی یاد گرفتم؟</mat-label>
+    <textarea matInput>{{ learned }}</textarea>
+  </mat-form-field>
+
+  <label class="file">
+    <span class="file-custom">عکس کامل پروژه : </span>
+    <input type="file" id="file" accept="image/*" />
+  </label>
+
+  <div class="divider"></div>
+
+  @if (show) {
+  <editor
+    apiKey="yjcaoq9hsst3klf39jp2da6lj47f25of83co4snoyixvmywr"
+    [init]="init"
+    [initialValue]="initialValue"
+  >
+  </editor>
+  }
+
+  <div class="divider"></div>
+
+  <div class="buttons">
+    <button type="submit" mat-flat-button>ثبت</button>
+  </div>
+</div>

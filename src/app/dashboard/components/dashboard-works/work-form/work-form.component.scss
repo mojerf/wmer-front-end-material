@@ -67,7 +67,29 @@
     gap: 1rem;
   }
 
+  .triple-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
   .divider {
     padding: 0.65rem;
+  }
+}
+.file {
+  input[type="file"]::file-selector-button {
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    background-color: var(
+      --mdc-filled-button-container-color,
+      var(--mat-app-primary)
+    );
+    border-radius: var(
+      --mdc-filled-button-container-shape,
+      var(--mat-app-corner-full)
+    );
+    color: var(--mdc-filled-button-label-text-color, var(--mat-app-on-primary));
+    border: none;
   }
 }
