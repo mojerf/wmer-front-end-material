@@ -21,6 +21,7 @@
   --border-second-bg: #3b3b3f;
   --active-link-color: rgba(38, 103, 255, 0.3);
   --blue-button-color: #90caf9;
+  --dialog-color-overlay: rgba(255, 255, 255, 0.05);
 
   body[data-theme="light"] {
     @include mat.all-component-colors(theme.$light-theme);
@@ -36,9 +37,10 @@
 
     --secondary-text-color: #51525b;
     --danger-color: #de3730;
-    --border-second-bg: #e4e2e6;
+    --border-second-bg: #eae7ec;
     --active-link-color: rgba(38, 103, 255, 0.2);
     --blue-button-color: #1976d2;
+    --dialog-color-overlay: rgba(0, 0, 0, 0.37);
   }
 }
 
@@ -168,4 +170,8 @@ body {
 
 .mat-mdc-chip-row {
   direction: ltr;
+}
+
+.cdk-overlay-dark-backdrop {
+  background: var(--dialog-color-overlay);
 }

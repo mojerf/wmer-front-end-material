@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmationModalComponent } from '../../../shared/components/confirmation-modal/confirmation-modal.component';
 
 const POSTS = [
   {
@@ -15,4 +17,26 @@ const POSTS = [
 })
 export class DashboardPostsComponent {
   posts = POSTS;
+
+  constructor(private dialog: MatDialog) {}
+
+  deletePostModal(id: number, title: string) {
+    const dialogRef = this.dialog.open(ConfirmationModalComponent, {
+      width: '22rem',
+      data: {
+        title: 'پاک کردن نوشته',
+        description: `آیا میخواهید نوشته <b>${title}</b> را پاک کنید؟`,
+      },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.deletePost(id);
+      }
+    });
+  }
+
+  deletePost(id: number) {
+    console.log('Deleting post with id:', id);
+  }
 }

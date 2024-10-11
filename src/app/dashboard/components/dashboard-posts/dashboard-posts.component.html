@@ -21,7 +21,10 @@
         </a>
       </td>
       <td>
-        <button matTooltip="حذف نوشته">
+        <button
+          matTooltip="حذف نوشته"
+          (click)="deletePostModal(post.id, post.title)"
+        >
           <span class="material-symbols-rounded delete-button"> delete </span>
         </button>
       </td>

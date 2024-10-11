@@ -21,7 +21,10 @@
         </a>
       </td>
       <td>
-        <button matTooltip="حذف نمونه کار">
+        <button
+          matTooltip="حذف نمونه کار"
+          (click)="deleteWorkModal(work.id, work.title)"
+        >
           <span class="material-symbols-rounded delete-button"> delete </span>
         </button>
       </td>
