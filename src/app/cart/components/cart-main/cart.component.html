@@ -24,11 +24,13 @@
         </a>
       </td>
       <td>
-        <p>{{ product.price.toLocaleString() }} تومان</p>
-        @if (product.priceBefore) {
+        @if (product.newPrice) {
+        <p>{{ product.newPrice.toLocaleString() }} تومان</p>
         <s>
-          <small>{{ product.priceBefore.toLocaleString() }} تومان</small>
+          <small>{{ product.price.toLocaleString() }} تومان</small>
         </s>
+        }@else {
+        <p>{{ product.price.toLocaleString() }} تومان</p>
         }
       </td>
       <td>

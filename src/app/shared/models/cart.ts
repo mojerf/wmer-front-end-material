@@ -2,7 +2,7 @@ export interface CartItem {
   id: number;
   title: string;
   image: string;
-  priceBefore?: number;
+  newPrice?: number;
   price: number;
   url: string;
 }
@@ -16,6 +16,6 @@ export interface FullProduct {
   date: string;
   commentCount: number;
   author: string;
-  priceBefore?: number;
+  priceWithDiscount?: number;
   price: number;
 }

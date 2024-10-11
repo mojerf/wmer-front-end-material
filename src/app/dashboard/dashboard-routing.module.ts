@@ -9,6 +9,7 @@ import { DashboardPostsComponent } from './components/dashboard-posts/dashboard-
 import { DashboardProductsComponent } from './components/dashboard-products/dashboard-products.component';
 import { DashboardSalesComponent } from './components/dashboard-sales/dashboard-sales.component';
 import { PostFormComponent } from './components/dashboard-posts/post-form/post-form.component';
+import { ProductFormComponent } from './components/dashboard-products/product-form/product-form.component';
 
 const routes: Routes = [
   {
@@ -79,8 +80,13 @@ const routes: Routes = [
           },
           {
             path: 'add-product',
-            title: 'مجتبی عرفان راد | نوشته جدید',
-            component: DashboardSalesComponent,
+            title: 'مجتبی عرفان راد | محصول جدید',
+            component: ProductFormComponent,
+          },
+          {
+            path: 'edit-product/:id',
+            title: 'مجتبی عرفان راد | ویرایش  محصول',
+            component: ProductFormComponent,
           },
         ],
       },

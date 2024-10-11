@@ -18,6 +18,8 @@ import { DashboardProductsComponent } from './components/dashboard-products/dash
 import { DashboardSalesComponent } from './components/dashboard-sales/dashboard-sales.component';
 import { PostFormComponent } from './components/dashboard-posts/post-form/post-form.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { ProductFormComponent } from './components/dashboard-products/product-form/product-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     DashboardProductsComponent,
     DashboardSalesComponent,
     PostFormComponent,
+    ProductFormComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +44,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     MatTableModule,
     MatTooltipModule,
     EditorModule,
+    FormsModule,
   ],
 })
 export class DashboardModule {}

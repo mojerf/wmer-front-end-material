@@ -52,6 +52,23 @@
     </mat-form-field>
   </div>
 
+  <mat-form-field appearance="fill">
+    <mat-label>توضیح کوتاه</mat-label>
+    <textarea matInput>{{ expert }}</textarea>
+  </mat-form-field>
+
+  <div class="double-input">
+    <mat-form-field appearance="fill">
+      <mat-label>قیمت</mat-label>
+      <input matInput [value]="price" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>قیمت با تخفیف</mat-label>
+      <input matInput [value]="newPrice" />
+    </mat-form-field>
+  </div>
+
   @if (show) {
   <editor
     apiKey="yjcaoq9hsst3klf39jp2da6lj47f25of83co4snoyixvmywr"

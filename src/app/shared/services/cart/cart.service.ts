@@ -30,7 +30,7 @@ export class CartService {
       id: product.id,
       title: product.title,
       image: product.image,
-      priceBefore: product.priceBefore,
+      newPrice: product.priceWithDiscount,
       price: product.price,
       url: slug,
     };
