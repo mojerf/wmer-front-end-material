@@ -11,11 +11,12 @@
     th {
       padding: 0.5rem;
       text-align: center;
-      border-bottom: 1px solid var(--mat-app-text-color);
     }
 
     tr:nth-child(even) {
       background-color: var(--border-second-bg);
+      border-bottom: 1px solid var(--mat-app-text-color);
+      border-top: 1px solid var(--mat-app-text-color);
     }
 
     .image-container {

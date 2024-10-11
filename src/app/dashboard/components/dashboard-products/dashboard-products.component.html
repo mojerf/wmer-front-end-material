@@ -1,0 +1,40 @@
+<div class="container">
+  @if(products.length>0){
+  <table class="table">
+    <tr>
+      <th class="small-column">ID</th>
+      <th>عنوان</th>
+      <th class="small-column">ویرایش</th>
+      <th class="small-column">حذف</th>
+    </tr>
+    @for (product of products; track product.id) {
+    <tr>
+      <td>{{ product.id }}</td>
+      <td>
+        <a routerLink="/store/{{ product.url }}">
+          <h4>{{ product.title }}</h4>
+        </a>
+      </td>
+      <td>
+        <a routerLink="edit-product/{{ product.id }}" matTooltip="ویرایش محصول">
+          <span class="material-symbols-rounded edit-button"> edit </span>
+        </a>
+      </td>
+      <td>
+        <button
+          matTooltip="حذف محصول"
+          (click)="deleteProductModal(product.id, product.title)"
+        >
+          <span class="material-symbols-rounded delete-button"> delete </span>
+        </button>
+      </td>
+    </tr>
+    }
+  </table>
+  }@else {
+  <p>محصولی یافت نشد.</p>
+  }
+  <div>
+    <a routerLink="add-product" mat-flat-button>محصول جدید</a>
+  </div>
+</div>

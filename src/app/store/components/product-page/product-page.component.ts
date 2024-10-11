@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../../../shared/services/cart/cart.service';
-import { FullProduct } from '../../../shared/model/cart';
+import { FullProduct } from '../../../shared/models/cart';
 
-const PRODUCT = {
+const PRODUCT: FullProduct = {
   id: 1,
   title: 'قالب شخصی حرفه ای',
   description:
@@ -14,8 +14,8 @@ const PRODUCT = {
   date: '1403/07/06',
   commentCount: 10,
   author: 'مجتبی عرفان راد',
-  priceBefore: 60000,
-  price: 50000,
+  priceWithDiscount: 50000,
+  price: 60000,
 };
 
 const COMMENTS = [

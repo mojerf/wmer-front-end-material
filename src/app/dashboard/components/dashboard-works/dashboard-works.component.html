@@ -1,0 +1,40 @@
+<div class="container">
+  @if(works.length>0){
+  <table class="table">
+    <tr>
+      <th class="small-column">ID</th>
+      <th>عنوان</th>
+      <th class="small-column">ویرایش</th>
+      <th class="small-column">حذف</th>
+    </tr>
+    @for (work of works; track work.id) {
+    <tr>
+      <td>{{ work.id }}</td>
+      <td>
+        <a routerLink="/works/{{ work.url }}">
+          <h4>{{ work.title }}</h4>
+        </a>
+      </td>
+      <td>
+        <a routerLink="edit-work/{{ work.id }}" matTooltip="ویرایش نمونه کار">
+          <span class="material-symbols-rounded edit-button"> edit </span>
+        </a>
+      </td>
+      <td>
+        <button
+          matTooltip="حذف نمونه کار"
+          (click)="deleteWorkModal(work.id, work.title)"
+        >
+          <span class="material-symbols-rounded delete-button"> delete </span>
+        </button>
+      </td>
+    </tr>
+    }
+  </table>
+  }@else {
+  <p>نمونه کاری یافت نشد.</p>
+  }
+  <div>
+    <a routerLink="add-work" mat-flat-button>نمونه کار جدید</a>
+  </div>
+</div>

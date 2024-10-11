@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CartItem } from '../../../shared/model/cart';
+import { CartItem } from '../../../shared/models/cart';
 import { CartService } from '../../../shared/services/cart/cart.service';
 
 @Component({
@@ -19,7 +19,7 @@ export class CartComponent implements OnInit {
       this.cartItems = data;
       this.cartItemCount = data.length;
       this.sumPrice = data
-        .map((x) => x.price)
+        .map((x) => (x.newPrice ? x.newPrice : x.price))
         .reduce((accumulator, current) => accumulator + current);
     });
     this.cartService.getCartItems();

@@ -25,13 +25,19 @@
       <p>{{ product.shortDetail }}</p>
       <div class="price">
         <p>قیمت :</p>
+        @if (product.priceWithDiscount) {
+        <h2>
+          <strong
+            >{{ product.priceWithDiscount.toLocaleString() }} تومان</strong
+          >
+        </h2>
+        <h3 class="discount">
+          <s>{{ product.price.toLocaleString() }} تومان</s>
+        </h3>
+        }@else {
         <h2>
           <strong>{{ product.price.toLocaleString() }} تومان</strong>
         </h2>
-        @if (product.priceBefore) {
-        <h3 class="discount">
-          <s>{{ product.priceBefore.toLocaleString() }} تومان</s>
-        </h3>
         }
       </div>
       <div class="buy-button">

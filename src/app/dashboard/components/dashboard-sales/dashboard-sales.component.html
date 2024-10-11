@@ -1,0 +1,28 @@
+<div class="container">
+  @if(sales.length>0){
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>عنوان</th>
+      <th>خریدار</th>
+      <th>قیمت</th>
+      <th>تاریخ</th>
+    </tr>
+    @for (sale of sales; track sale.id) {
+    <tr>
+      <td>{{ sale.id }}</td>
+      <td>
+        <a routerLink="/store/{{ sale.url }}">
+          <h4>{{ sale.title }}</h4>
+        </a>
+      </td>
+      <td>{{ sale.buyer }}</td>
+      <td>{{ sale.price.toLocaleString() }} تومان</td>
+      <td>{{ sale.date }}</td>
+    </tr>
+    }
+  </table>
+  }@else {
+  <p>نوشته ای یافت نشد.</p>
+  }
+</div>

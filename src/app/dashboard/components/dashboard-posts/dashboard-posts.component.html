@@ -1,0 +1,40 @@
+<div class="container">
+  @if(posts.length>0){
+  <table class="table">
+    <tr>
+      <th class="small-column">ID</th>
+      <th>عنوان</th>
+      <th class="small-column">ویرایش</th>
+      <th class="small-column">حذف</th>
+    </tr>
+    @for (post of posts; track post.id) {
+    <tr>
+      <td>{{ post.id }}</td>
+      <td>
+        <a routerLink="/posts/{{ post.url }}">
+          <h4>{{ post.title }}</h4>
+        </a>
+      </td>
+      <td>
+        <a routerLink="edit-post/{{ post.id }}" matTooltip="ویرایش نوشته">
+          <span class="material-symbols-rounded edit-button"> edit </span>
+        </a>
+      </td>
+      <td>
+        <button
+          matTooltip="حذف نوشته"
+          (click)="deletePostModal(post.id, post.title)"
+        >
+          <span class="material-symbols-rounded delete-button"> delete </span>
+        </button>
+      </td>
+    </tr>
+    }
+  </table>
+  }@else {
+  <p>نوشته ای یافت نشد.</p>
+  }
+  <div>
+    <a routerLink="add-post" mat-flat-button>نوشته جدید</a>
+  </div>
+</div>

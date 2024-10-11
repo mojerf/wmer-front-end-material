@@ -1,0 +1,47 @@
+<div class="title">
+  <h4>اطلاعات شخصی</h4>
+</div>
+
+<form>
+  <mat-form-field appearance="fill">
+    <mat-label>نام</mat-label>
+    <input matInput [value]="firstName" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>نام خانوادگی</mat-label>
+    <input matInput [value]="lastName" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>ایمیل*</mat-label>
+    <input matInput type="email" [value]="email" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>شماره موبایل</mat-label>
+    <input matInput [value]="phoneNumber" />
+  </mat-form-field>
+  <div class="buttons">
+    <button type="submit" mat-flat-button>ثبت</button>
+  </div>
+</form>
+
+<div class="title">
+  <h4>تغییر رمز عبور</h4>
+</div>
+
+<form class="password-form">
+  <mat-form-field appearance="fill" aria-colspan="2">
+    <mat-label>رمز عبور فعلی*</mat-label>
+    <input matInput type="password" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>رمز عبور جدید*</mat-label>
+    <input matInput type="password" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>تکرار رمز عبور جدید*</mat-label>
+    <input matInput type="password" />
+  </mat-form-field>
+  <div class="buttons">
+    <button type="submit" mat-flat-button>ثبت</button>
+  </div>
+</form>

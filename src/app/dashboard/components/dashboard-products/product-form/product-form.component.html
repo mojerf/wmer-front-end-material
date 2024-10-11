@@ -1,0 +1,86 @@
+<div class="container">
+  <div
+    (dragover)="highlight()"
+    (dragleave)="unhighlight()"
+    [classList]="
+      isHighlighted
+        ? 'isHighlighted formbold-file-input'
+        : 'formbold-file-input'
+    "
+  >
+    <input
+      type="file"
+      name="file"
+      id="file"
+      accept="image/*"
+      (change)="readFile($event)"
+    />
+    <label
+      for="file"
+      (drop)="readFile($event)"
+      [class.wrong-format]="wrongFormat"
+    >
+      @if (isHighlighted) {
+      <div>
+        <span class="formbold-drop-file"> عکس را اینجا رها کنید </span>
+      </div>
+      } @else {
+      <div>
+        <span class="formbold-drop-file"> عکس را اینجا رها کنید </span>
+        <span class="formbold-or"> یا </span>
+        <span class="formbold-browse"> فایل را انتخاب کنید </span>
+      </div>
+      }
+    </label>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="double-input">
+    <mat-form-field appearance="fill">
+      <mat-label>عنوان</mat-label>
+      <input
+        matInput
+        [(ngModel)]="title"
+        (ngModelChange)="titleChange($event)"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>لینک</mat-label>
+      <input matInput [(ngModel)]="slug" />
+    </mat-form-field>
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>توضیح کوتاه</mat-label>
+    <textarea matInput>{{ expert }}</textarea>
+  </mat-form-field>
+
+  <div class="double-input">
+    <mat-form-field appearance="fill">
+      <mat-label>قیمت</mat-label>
+      <input matInput [value]="price" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>قیمت با تخفیف</mat-label>
+      <input matInput [value]="newPrice" />
+    </mat-form-field>
+  </div>
+
+  @if (show) {
+  <editor
+    apiKey="yjcaoq9hsst3klf39jp2da6lj47f25of83co4snoyixvmywr"
+    [init]="init"
+    [initialValue]="initialValue"
+  >
+  </editor>
+  }
+
+  <div class="divider"></div>
+
+  <div class="buttons">
+    <button type="submit" mat-flat-button>ثبت</button>
+  </div>
+</div>

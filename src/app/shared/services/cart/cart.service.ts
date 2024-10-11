@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { CartItem, FullProduct } from '../../model/cart';
+import { CartItem, FullProduct } from '../../models/cart';
 import { NotificationService } from '../notification/notification.service';
 
 @Injectable({
@@ -30,7 +30,7 @@ export class CartService {
       id: product.id,
       title: product.title,
       image: product.image,
-      priceBefore: product.priceBefore,
+      newPrice: product.priceWithDiscount,
       price: product.price,
       url: slug,
     };
