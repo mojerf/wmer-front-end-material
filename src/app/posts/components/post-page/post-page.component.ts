@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Comment } from '../../../shared/models/comment';
+import { Title } from '@angular/platform-browser';
 
 const POST = {
   id: 1,
@@ -50,11 +51,13 @@ export class PostPageComponent implements OnInit {
 
   needCard = false;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private titleService: Title) {}
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.slug = params['slug'];
     });
+
+    this.titleService.setTitle('مجتبی عرفان راد | ' + this.post.title);
   }
 }

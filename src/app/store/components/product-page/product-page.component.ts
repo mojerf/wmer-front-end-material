@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../../../shared/services/cart/cart.service';
 import { FullProduct } from '../../../shared/models/cart';
 import { Comment } from '../../../shared/models/comment';
+import { Title } from '@angular/platform-browser';
 
 const PRODUCT: FullProduct = {
   id: 1,
@@ -57,13 +58,16 @@ export class ProductPageComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private cartService: CartService
+    private cartService: CartService,
+    private titleService: Title
   ) {}
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.slug = params['slug'];
     });
+
+    this.titleService.setTitle('مجتبی عرفان راد | ' + this.product.title);
   }
 
   addToBasket() {
