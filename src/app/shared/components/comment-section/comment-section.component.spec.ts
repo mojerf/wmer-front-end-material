@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CommentSectionComponent } from './comment-section.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('CommentSectionComponent', () => {
   let component: CommentSectionComponent;
@@ -8,9 +11,9 @@ describe('CommentSectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CommentSectionComponent]
-    })
-    .compileComponents();
+      declarations: [CommentSectionComponent],
+      imports: [MatFormFieldModule, MatInputModule, NoopAnimationsModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CommentSectionComponent);
     component = fixture.componentInstance;
