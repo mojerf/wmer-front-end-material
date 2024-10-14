@@ -7,12 +7,16 @@ import { NotificationComponent } from './components/notification/notification.co
 import { ConfirmationModalComponent } from './components/confirmation-modal/confirmation-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { CommentSectionComponent } from './components/comment-section/comment-section.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
     PaginatorComponent,
     NotificationComponent,
     ConfirmationModalComponent,
+    CommentSectionComponent,
   ],
   imports: [
     CommonModule,
@@ -20,11 +24,14 @@ import { MatButtonModule } from '@angular/material/button';
     MatTooltipModule,
     MatDialogModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   exports: [
     PaginatorComponent,
     NotificationComponent,
     ConfirmationModalComponent,
+    CommentSectionComponent,
   ],
 })
 export class SharedModule {}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Comment } from '../../../shared/models/comment';
 
 const WORK = {
   id: 1,
@@ -18,6 +19,30 @@ const WORK = {
   role: 'Front-End , Back-End Developer',
 };
 
+const COMMENTS: Comment[] = [
+  {
+    id: 1,
+    parentId: 0,
+    date: '4 روز پیش',
+    author: 'ممد',
+    text: 'عالی بود خداییش!',
+  },
+  {
+    id: 2,
+    parentId: 1,
+    date: '3 روز پیش',
+    author: 'رضا',
+    text: 'حال نکردم خیلی بد بود.',
+  },
+  {
+    id: 3,
+    parentId: 0,
+    date: '2 روز پیش',
+    author: 'عباس',
+    text: 'داوشمی.',
+  },
+];
+
 @Component({
   selector: 'app-work-page',
   templateUrl: './work-page.component.html',
@@ -28,6 +53,7 @@ export class WorkPageComponent implements OnInit {
   title = this.work.title;
   needCard = false;
   slug!: string;
+  comments = COMMENTS;
 
   constructor(private route: ActivatedRoute) {}
 

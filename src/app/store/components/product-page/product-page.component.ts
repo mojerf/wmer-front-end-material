@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../../../shared/services/cart/cart.service';
 import { FullProduct } from '../../../shared/models/cart';
+import { Comment } from '../../../shared/models/comment';
 
 const PRODUCT: FullProduct = {
   id: 1,
@@ -18,21 +19,27 @@ const PRODUCT: FullProduct = {
   price: 60000,
 };
 
-const COMMENTS = [
+const COMMENTS: Comment[] = [
   {
     id: 1,
-    name: 'ممد',
-    message: 'عالی بود خداییش!',
+    parentId: 0,
+    date: '4 روز پیش',
+    author: 'ممد',
+    text: 'عالی بود خداییش!',
   },
   {
     id: 2,
-    name: 'رضا',
-    message: 'حال نکردم خیلی بد بود.',
+    parentId: 1,
+    date: '3 روز پیش',
+    author: 'رضا',
+    text: 'حال نکردم خیلی بد بود.',
   },
   {
     id: 3,
-    name: 'عباس',
-    message: 'داوشمی.',
+    parentId: 0,
+    date: '2 روز پیش',
+    author: 'عباس',
+    text: 'داوشمی.',
   },
 ];
 
