@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CartItem } from './shared/models/cart';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NotificationService } from './shared/services/notification/notification.service';
@@ -6,6 +6,13 @@ import { NotificationComponent } from './shared/components/notification/notifica
 import { CartService } from './shared/services/cart/cart.service';
 import { Menu } from './shared/models/menu';
 import { ThemeService } from './shared/services/theme/theme.service';
+import { LoadingService } from './shared/services/loading/loading.service';
+import {
+  Router,
+  NavigationStart,
+  NavigationCancel,
+  NavigationEnd,
+} from '@angular/router';
 
 const MENU: Menu[] = [
   {
@@ -39,7 +46,7 @@ const MENU: Menu[] = [
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
   menu = MENU;
   logoUrl = 'image/logo-l.png';
   titleName = 'مجتبی عرفان راد';
@@ -47,6 +54,7 @@ export class AppComponent implements OnInit {
   themeIcon = 'contrast';
   pageTitle = 'صفحه اصلی';
   needCard = false;
+  loading = 'display:block;';
 
   cartItems: CartItem[] = [];
   cartItemCount = 0;
@@ -55,7 +63,9 @@ export class AppComponent implements OnInit {
     private cartService: CartService,
     private snackBar: MatSnackBar,
     private notificationService: NotificationService,
-    private themeService: ThemeService
+    private themeService: ThemeService,
+    private loadingService: LoadingService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -74,6 +84,23 @@ export class AppComponent implements OnInit {
       this.cartItemCount = data.length;
     });
     this.cartService.getCartItems();
+
+    this.loadingService.loading$.subscribe((state) => {
+      this.loading = state ? 'display:block;' : 'display:none;';
+    });
+  }
+
+  ngAfterViewInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.loadingService.setLoading(true);
+      } else if (
+        event instanceof NavigationEnd ||
+        event instanceof NavigationCancel
+      ) {
+        this.loadingService.setLoading(false);
+      }
+    });
   }
 
   onActivate($event: { title: string; needCard?: boolean }) {

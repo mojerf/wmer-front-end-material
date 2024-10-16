@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Comment } from '../../../shared/models/comment';
+import { Title } from '@angular/platform-browser';
 
 const POST = {
   id: 1,
@@ -12,21 +14,27 @@ const POST = {
   commentCount: 10,
 };
 
-const COMMENTS = [
+const COMMENTS: Comment[] = [
   {
     id: 1,
-    name: 'ممد',
-    message: 'عالی بود خداییش!',
+    parentId: 0,
+    date: '4 روز پیش',
+    author: 'ممد',
+    text: 'عالی بود خداییش!',
   },
   {
     id: 2,
-    name: 'رضا',
-    message: 'حال نکردم خیلی بد بود.',
+    parentId: 1,
+    date: '3 روز پیش',
+    author: 'رضا',
+    text: 'حال نکردم خیلی بد بود.',
   },
   {
     id: 3,
-    name: 'عباس',
-    message: 'داوشمی.',
+    parentId: 0,
+    date: '2 روز پیش',
+    author: 'عباس',
+    text: 'داوشمی.',
   },
 ];
 
@@ -43,11 +51,13 @@ export class PostPageComponent implements OnInit {
 
   needCard = false;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private titleService: Title) {}
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.slug = params['slug'];
     });
+
+    this.titleService.setTitle('مجتبی عرفان راد | ' + this.post.title);
   }
 }

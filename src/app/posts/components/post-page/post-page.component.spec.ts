@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PostPageComponent } from './post-page.component';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '../../../shared/shared.module';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('PostPageComponent', () => {
   let component: PostPageComponent;
@@ -10,7 +12,7 @@ describe('PostPageComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [PostPageComponent],
-      imports: [RouterModule.forRoot([])],
+      imports: [RouterModule.forRoot([]), SharedModule, NoopAnimationsModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(PostPageComponent);
