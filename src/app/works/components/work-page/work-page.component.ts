@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Comment } from '../../../shared/models/comment';
 import { Title } from '@angular/platform-browser';
+import { MatChipSet, MatChip } from '@angular/material/chips';
+import { CommentSectionComponent } from '../../../shared/components/comment-section/comment-section.component';
 
 const WORK = {
   id: 1,
@@ -45,9 +47,10 @@ const COMMENTS: Comment[] = [
 ];
 
 @Component({
-  selector: 'app-work-page',
-  templateUrl: './work-page.component.html',
-  styleUrl: './work-page.component.scss',
+    selector: 'app-work-page',
+    templateUrl: './work-page.component.html',
+    styleUrl: './work-page.component.scss',
+    imports: [MatChipSet, MatChip, CommentSectionComponent]
 })
 export class WorkPageComponent implements OnInit {
   work = WORK;

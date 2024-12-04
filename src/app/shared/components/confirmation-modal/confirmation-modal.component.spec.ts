@@ -13,19 +13,18 @@ describe('ConfirmationModalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ConfirmationModalComponent],
-      imports: [MatDialogModule],
-      providers: [
+    imports: [MatDialogModule, ConfirmationModalComponent],
+    providers: [
         {
-          provide: MAT_DIALOG_DATA,
-          useValue: {
-            title: 'delete',
-            description: 'you sure?',
-          },
+            provide: MAT_DIALOG_DATA,
+            useValue: {
+                title: 'delete',
+                description: 'you sure?',
+            },
         },
         { provide: MatDialogRef, useValue: {} },
-      ],
-    }).compileComponents();
+    ],
+}).compileComponents();
 
     fixture = TestBed.createComponent(ConfirmationModalComponent);
     component = fixture.componentInstance;

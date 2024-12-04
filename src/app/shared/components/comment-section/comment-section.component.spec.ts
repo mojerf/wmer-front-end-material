@@ -11,9 +11,8 @@ describe('CommentSectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CommentSectionComponent],
-      imports: [MatFormFieldModule, MatInputModule, NoopAnimationsModule],
-    }).compileComponents();
+    imports: [MatFormFieldModule, MatInputModule, NoopAnimationsModule, CommentSectionComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(CommentSectionComponent);
     component = fixture.componentInstance;

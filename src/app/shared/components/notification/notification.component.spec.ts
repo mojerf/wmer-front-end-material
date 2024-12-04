@@ -13,19 +13,18 @@ describe('NotificationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NotificationComponent],
-      imports: [MatSnackBarModule],
-      providers: [
+    imports: [MatSnackBarModule, NotificationComponent],
+    providers: [
         {
-          provide: MatSnackBarRef,
-          useValue: {},
+            provide: MatSnackBarRef,
+            useValue: {},
         },
         {
-          provide: MAT_SNACK_BAR_DATA,
-          useValue: {}, // Add any data you wish to test if it is passed/used correctly
+            provide: MAT_SNACK_BAR_DATA,
+            useValue: {}, // Add any data you wish to test if it is passed/used correctly
         },
-      ],
-    }).compileComponents();
+    ],
+}).compileComponents();
 
     fixture = TestBed.createComponent(NotificationComponent);
     component = fixture.componentInstance;

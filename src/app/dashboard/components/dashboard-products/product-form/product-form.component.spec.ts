@@ -13,15 +13,15 @@ describe('ProductFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ProductFormComponent],
-      imports: [
+    imports: [
         RouterModule.forRoot([]),
         FormsModule,
         MatFormFieldModule,
         MatInputModule,
         NoopAnimationsModule,
-      ],
-    }).compileComponents();
+        ProductFormComponent,
+    ],
+}).compileComponents();
 
     fixture = TestBed.createComponent(ProductFormComponent);
     component = fixture.componentInstance;

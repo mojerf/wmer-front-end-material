@@ -21,15 +21,7 @@ describe('MainPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        MainPageComponent,
-        MainPageAboutComponent,
-        MainPageContactComponent,
-        MainPagePostsComponent,
-        MainPageStoreComponent,
-        MainPageWorksComponent,
-      ],
-      imports: [
+    imports: [
         MatChipsModule,
         MatButtonModule,
         MatTooltipModule,
@@ -37,8 +29,14 @@ describe('MainPageComponent', () => {
         MatInputModule,
         NoopAnimationsModule,
         RouterModule.forRoot([]),
-      ],
-    }).compileComponents();
+        MainPageComponent,
+        MainPageAboutComponent,
+        MainPageContactComponent,
+        MainPagePostsComponent,
+        MainPageStoreComponent,
+        MainPageWorksComponent,
+    ],
+}).compileComponents();
 
     fixture = TestBed.createComponent(MainPageComponent);
     component = fixture.componentInstance;

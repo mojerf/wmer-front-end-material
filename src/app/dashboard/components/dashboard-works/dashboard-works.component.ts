@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { ConfirmationModalComponent } from '../../../shared/components/confirmation-modal/confirmation-modal.component';
 import { MatDialog } from '@angular/material/dialog';
+import { RouterLink } from '@angular/router';
+import { MatTooltip } from '@angular/material/tooltip';
+import { MatAnchor } from '@angular/material/button';
 
 const WORKS = [
   {
@@ -11,9 +14,10 @@ const WORKS = [
 ];
 
 @Component({
-  selector: 'app-dashboard-works',
-  templateUrl: './dashboard-works.component.html',
-  styleUrl: './dashboard-works.component.scss',
+    selector: 'app-dashboard-works',
+    templateUrl: './dashboard-works.component.html',
+    styleUrl: './dashboard-works.component.scss',
+    imports: [RouterLink, MatTooltip, MatAnchor]
 })
 export class DashboardWorksComponent {
   works = WORKS;

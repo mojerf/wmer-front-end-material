@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationModalComponent } from '../../../shared/components/confirmation-modal/confirmation-modal.component';
+import { RouterLink } from '@angular/router';
+import { MatTooltip } from '@angular/material/tooltip';
+import { MatAnchor } from '@angular/material/button';
 
 const POSTS = [
   {
@@ -11,9 +14,10 @@ const POSTS = [
 ];
 
 @Component({
-  selector: 'app-dashboard-posts',
-  templateUrl: './dashboard-posts.component.html',
-  styleUrl: './dashboard-posts.component.scss',
+    selector: 'app-dashboard-posts',
+    templateUrl: './dashboard-posts.component.html',
+    styleUrl: './dashboard-posts.component.scss',
+    imports: [RouterLink, MatTooltip, MatAnchor]
 })
 export class DashboardPostsComponent {
   posts = POSTS;

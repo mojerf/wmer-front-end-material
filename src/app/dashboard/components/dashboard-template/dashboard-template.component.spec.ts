@@ -10,9 +10,8 @@ describe('DashboardTemplateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DashboardTemplateComponent],
-      imports: [MatRippleModule, RouterModule.forRoot([])],
-    }).compileComponents();
+    imports: [MatRippleModule, RouterModule.forRoot([]), DashboardTemplateComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(DashboardTemplateComponent);
     component = fixture.componentInstance;

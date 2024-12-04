@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Menu } from '../../../shared/models/menu';
+import { RouterLinkActive, RouterLink, RouterOutlet } from '@angular/router';
+import { MatRipple } from '@angular/material/core';
 
 const MENU: Menu[] = [
   {
@@ -47,9 +49,10 @@ const MENU: Menu[] = [
 ];
 
 @Component({
-  selector: 'app-dashboard-template',
-  templateUrl: './dashboard-template.component.html',
-  styleUrl: './dashboard-template.component.scss',
+    selector: 'app-dashboard-template',
+    templateUrl: './dashboard-template.component.html',
+    styleUrl: './dashboard-template.component.scss',
+    imports: [RouterLinkActive, MatRipple, RouterLink, RouterOutlet]
 })
 export class DashboardTemplateComponent {
   title = 'پنل کاربری';

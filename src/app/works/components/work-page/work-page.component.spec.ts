@@ -12,14 +12,14 @@ describe('WorkPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [WorkPageComponent],
-      imports: [
+    imports: [
         RouterModule.forRoot([]),
         MatChipsModule,
         SharedModule,
         NoopAnimationsModule,
-      ],
-    }).compileComponents();
+        WorkPageComponent,
+    ],
+}).compileComponents();
 
     fixture = TestBed.createComponent(WorkPageComponent);
     component = fixture.componentInstance;

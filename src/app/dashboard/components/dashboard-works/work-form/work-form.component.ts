@@ -1,12 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../../../../shared/services/theme/theme.service';
 import { ActivatedRoute } from '@angular/router';
-import { MatChipEditedEvent, MatChipInputEvent } from '@angular/material/chips';
+import { MatChipEditedEvent, MatChipInputEvent, MatChipGrid, MatChipRow, MatChipRemove, MatChipInput } from '@angular/material/chips';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { EditorComponent } from '@tinymce/tinymce-angular';
+import { MatButton } from '@angular/material/button';
 
 @Component({
-  selector: 'app-work-form',
-  templateUrl: './work-form.component.html',
-  styleUrl: './work-form.component.scss',
+    selector: 'app-work-form',
+    templateUrl: './work-form.component.html',
+    styleUrl: './work-form.component.scss',
+    imports: [MatFormField, MatLabel, MatInput, FormsModule, MatChipGrid, MatChipRow, MatChipRemove, MatChipInput, EditorComponent, MatButton]
 })
 export class WorkFormComponent implements OnInit {
   isHighlighted = false;

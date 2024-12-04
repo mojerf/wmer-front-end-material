@@ -10,16 +10,16 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
+    imports: [
         RouterModule.forRoot([]),
         MatSidenavModule,
         NoopAnimationsModule,
         MatDividerModule,
         MatMenuModule,
         MatProgressBarModule,
-      ],
-      declarations: [AppComponent],
-    }).compileComponents();
+        AppComponent,
+    ],
+}).compileComponents();
   });
 
   it('should create the app', () => {

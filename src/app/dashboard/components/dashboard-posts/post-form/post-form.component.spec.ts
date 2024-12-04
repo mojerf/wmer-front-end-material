@@ -13,15 +13,15 @@ describe('PostFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PostFormComponent],
-      imports: [
+    imports: [
         RouterModule.forRoot([]),
         FormsModule,
         MatFormFieldModule,
         MatInputModule,
         NoopAnimationsModule,
-      ],
-    }).compileComponents();
+        PostFormComponent,
+    ],
+}).compileComponents();
 
     fixture = TestBed.createComponent(PostFormComponent);
     component = fixture.componentInstance;

@@ -14,16 +14,16 @@ describe('WorkFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [WorkFormComponent],
-      imports: [
+    imports: [
         RouterModule.forRoot([]),
         FormsModule,
         MatFormFieldModule,
         MatInputModule,
         NoopAnimationsModule,
         MatChipsModule,
-      ],
-    }).compileComponents();
+        WorkFormComponent,
+    ],
+}).compileComponents();
 
     fixture = TestBed.createComponent(WorkFormComponent);
     component = fixture.componentInstance;

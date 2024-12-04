@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Comment } from '../../../shared/models/comment';
 import { Title } from '@angular/platform-browser';
+import { CommentSectionComponent } from '../../../shared/components/comment-section/comment-section.component';
 
 const POST = {
   id: 1,
@@ -39,9 +40,10 @@ const COMMENTS: Comment[] = [
 ];
 
 @Component({
-  selector: 'app-post-page',
-  templateUrl: './post-page.component.html',
-  styleUrl: './post-page.component.scss',
+    selector: 'app-post-page',
+    templateUrl: './post-page.component.html',
+    styleUrl: './post-page.component.scss',
+    imports: [CommentSectionComponent]
 })
 export class PostPageComponent implements OnInit {
   post = POST;

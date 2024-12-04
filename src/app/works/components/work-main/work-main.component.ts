@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { MatChipSet, MatChip } from '@angular/material/chips';
+import { PaginatorComponent } from '../../../shared/components/paginator/paginator.component';
 
 const WORKS = [
   {
@@ -32,9 +35,10 @@ const WORKS = [
 ];
 
 @Component({
-  selector: 'app-work-main',
-  templateUrl: './work-main.component.html',
-  styleUrl: './work-main.component.scss',
+    selector: 'app-work-main',
+    templateUrl: './work-main.component.html',
+    styleUrl: './work-main.component.scss',
+    imports: [RouterLink, MatChipSet, MatChip, PaginatorComponent]
 })
 export class WorkMainComponent {
   title = 'نمونه کار ها';

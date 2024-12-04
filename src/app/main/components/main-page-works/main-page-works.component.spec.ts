@@ -10,9 +10,8 @@ describe('MainPageWorksComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MainPageWorksComponent],
-      imports: [MatChipsModule, RouterModule.forRoot([])],
-    }).compileComponents();
+    imports: [MatChipsModule, RouterModule.forRoot([]), MainPageWorksComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(MainPageWorksComponent);
     component = fixture.componentInstance;

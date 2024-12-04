@@ -7,12 +7,14 @@ import { CartService } from './shared/services/cart/cart.service';
 import { Menu } from './shared/models/menu';
 import { ThemeService } from './shared/services/theme/theme.service';
 import { LoadingService } from './shared/services/loading/loading.service';
-import {
-  Router,
-  NavigationStart,
-  NavigationCancel,
-  NavigationEnd,
-} from '@angular/router';
+import { Router, NavigationStart, NavigationCancel, NavigationEnd, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { MatProgressBar } from '@angular/material/progress-bar';
+import { MatSidenavContainer, MatSidenav, MatSidenavContent } from '@angular/material/sidenav';
+import { MatAnchor } from '@angular/material/button';
+import { MatTooltip } from '@angular/material/tooltip';
+import { MatMenuTrigger, MatMenu } from '@angular/material/menu';
+import { MatBadge } from '@angular/material/badge';
+import { MatDivider } from '@angular/material/divider';
 
 const MENU: Menu[] = [
   {
@@ -42,9 +44,10 @@ const MENU: Menu[] = [
 ];
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    imports: [MatProgressBar, MatSidenavContainer, MatSidenav, RouterLink, MatAnchor, RouterLinkActive, MatSidenavContent, MatTooltip, MatMenuTrigger, MatBadge, MatDivider, RouterOutlet, MatMenu]
 })
 export class AppComponent implements OnInit, AfterViewInit {
   menu = MENU;

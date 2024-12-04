@@ -11,9 +11,8 @@ describe('LoginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LoginComponent],
-      imports: [MatFormFieldModule, MatInputModule, NoopAnimationsModule],
-    }).compileComponents();
+    imports: [MatFormFieldModule, MatInputModule, NoopAnimationsModule, LoginComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;

@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CartItem } from '../../../shared/models/cart';
 import { CartService } from '../../../shared/services/cart/cart.service';
+import { RouterLink } from '@angular/router';
+import { MatAnchor } from '@angular/material/button';
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrl: './cart.component.scss',
+    selector: 'app-cart',
+    templateUrl: './cart.component.html',
+    styleUrl: './cart.component.scss',
+    imports: [RouterLink, MatAnchor]
 })
 export class CartComponent implements OnInit {
   cartItems: CartItem[] = [];

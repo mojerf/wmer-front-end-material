@@ -9,9 +9,8 @@ describe('DashboardPostsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DashboardPostsComponent],
-      imports: [RouterModule.forRoot([])],
-    }).compileComponents();
+    imports: [RouterModule.forRoot([]), DashboardPostsComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(DashboardPostsComponent);
     component = fixture.componentInstance;

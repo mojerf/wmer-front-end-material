@@ -15,15 +15,15 @@ import { MainPageStoreComponent } from './components/main-page-store/main-page-s
 import { MainPageContactComponent } from './components/main-page-contact/main-page-contact.component';
 
 @NgModule({
-  declarations: [MainPageComponent, MainPageAboutComponent, MainPageWorksComponent, MainPagePostsComponent, MainPageStoreComponent, MainPageContactComponent],
-  imports: [
-    CommonModule,
-    MatChipsModule,
-    MatTooltipModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    AppRoutingModule,
-  ],
+    imports: [
+        CommonModule,
+        MatChipsModule,
+        MatTooltipModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        AppRoutingModule,
+        MainPageComponent, MainPageAboutComponent, MainPageWorksComponent, MainPagePostsComponent, MainPageStoreComponent, MainPageContactComponent,
+    ],
 })
 export class MainModule {}

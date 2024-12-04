@@ -11,9 +11,8 @@ describe('RegisterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [RegisterComponent],
-      imports: [MatFormFieldModule, MatInputModule, NoopAnimationsModule],
-    }).compileComponents();
+    imports: [MatFormFieldModule, MatInputModule, NoopAnimationsModule, RegisterComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(RegisterComponent);
     component = fixture.componentInstance;
