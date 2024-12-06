@@ -11,8 +11,9 @@ describe('SettingsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [MatFormFieldModule, MatInputModule, NoopAnimationsModule, SettingsComponent],
-}).compileComponents();
+      declarations: [SettingsComponent],
+      imports: [MatFormFieldModule, MatInputModule, NoopAnimationsModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsComponent);
     component = fixture.componentInstance;

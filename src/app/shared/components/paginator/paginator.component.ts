@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
-import { MatRipple } from '@angular/material/core';
-import { MatTooltip } from '@angular/material/tooltip';
 
 @Component({
-    selector: 'app-paginator',
-    templateUrl: './paginator.component.html',
-    styleUrl: './paginator.component.scss',
-    imports: [MatRipple, MatTooltip]
+  selector: 'app-paginator',
+  templateUrl: './paginator.component.html',
+  styleUrl: './paginator.component.scss',
 })
 export class PaginatorComponent {
   disabledPrevious = true;

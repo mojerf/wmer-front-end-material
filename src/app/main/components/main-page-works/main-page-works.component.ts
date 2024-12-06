@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { MatChipSet, MatChip } from '@angular/material/chips';
 
 const WORKS = [
   {
@@ -34,10 +32,9 @@ const WORKS = [
 ];
 
 @Component({
-    selector: 'app-main-page-works',
-    templateUrl: './main-page-works.component.html',
-    styleUrl: './main-page-works.component.scss',
-    imports: [RouterLink, MatChipSet, MatChip]
+  selector: 'app-main-page-works',
+  templateUrl: './main-page-works.component.html',
+  styleUrl: './main-page-works.component.scss',
 })
 export class MainPageWorksComponent {
   works = WORKS;

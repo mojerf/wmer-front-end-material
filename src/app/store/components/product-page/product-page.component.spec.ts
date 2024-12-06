@@ -11,8 +11,9 @@ describe('ProductPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [RouterModule.forRoot([]), SharedModule, NoopAnimationsModule, ProductPageComponent],
-}).compileComponents();
+      declarations: [ProductPageComponent],
+      imports: [RouterModule.forRoot([]), SharedModule, NoopAnimationsModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ProductPageComponent);
     component = fixture.componentInstance;

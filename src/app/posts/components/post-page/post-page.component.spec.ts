@@ -11,8 +11,9 @@ describe('PostPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [RouterModule.forRoot([]), SharedModule, NoopAnimationsModule, PostPageComponent],
-}).compileComponents();
+      declarations: [PostPageComponent],
+      imports: [RouterModule.forRoot([]), SharedModule, NoopAnimationsModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PostPageComponent);
     component = fixture.componentInstance;

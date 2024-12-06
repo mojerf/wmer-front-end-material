@@ -9,8 +9,9 @@ describe('OrdersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [RouterModule.forRoot([]), OrdersComponent],
-}).compileComponents();
+      declarations: [OrdersComponent],
+      imports: [RouterModule.forRoot([])],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(OrdersComponent);
     component = fixture.componentInstance;

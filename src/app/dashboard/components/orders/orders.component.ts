@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { Order } from '../../models/order';
-import { RouterLink } from '@angular/router';
-import { MatTooltip } from '@angular/material/tooltip';
 
 const ORDERS = [
   {
@@ -15,10 +13,9 @@ const ORDERS = [
 ];
 
 @Component({
-    selector: 'app-orders',
-    templateUrl: './orders.component.html',
-    styleUrl: './orders.component.scss',
-    imports: [RouterLink, MatTooltip]
+  selector: 'app-orders',
+  templateUrl: './orders.component.html',
+  styleUrl: './orders.component.scss',
 })
 export class OrdersComponent {
   orders: Order[] = ORDERS;

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 const SALES = [
   {
@@ -13,10 +12,9 @@ const SALES = [
 ];
 
 @Component({
-    selector: 'app-dashboard-sales',
-    templateUrl: './dashboard-sales.component.html',
-    styleUrl: './dashboard-sales.component.scss',
-    imports: [RouterLink]
+  selector: 'app-dashboard-sales',
+  templateUrl: './dashboard-sales.component.html',
+  styleUrl: './dashboard-sales.component.scss',
 })
 export class DashboardSalesComponent {
   sales = SALES;

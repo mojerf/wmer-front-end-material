@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-main-page-about',
-    templateUrl: './main-page-about.component.html',
-    styleUrl: './main-page-about.component.scss'
+  selector: 'app-main-page-about',
+  templateUrl: './main-page-about.component.html',
+  styleUrl: './main-page-about.component.scss',
 })
 export class MainPageAboutComponent {
   aboutMeImage = 'image/programmer.jpg';

@@ -1,8 +1,4 @@
 import { Component } from '@angular/core';
-import { MatTooltip } from '@angular/material/tooltip';
-import { MatAnchor } from '@angular/material/button';
-import { RouterLink } from '@angular/router';
-import { PaginatorComponent } from '../../../shared/components/paginator/paginator.component';
 
 const POSTS = [
   {
@@ -40,10 +36,9 @@ const POSTS = [
 ];
 
 @Component({
-    selector: 'app-posts-main',
-    templateUrl: './posts-main.component.html',
-    styleUrl: './posts-main.component.scss',
-    imports: [MatTooltip, MatAnchor, RouterLink, PaginatorComponent]
+  selector: 'app-posts-main',
+  templateUrl: './posts-main.component.html',
+  styleUrl: './posts-main.component.scss',
 })
 export class PostsMainComponent {
   title = 'نوشته ها';

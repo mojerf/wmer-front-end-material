@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { MatTooltip } from '@angular/material/tooltip';
-import { MatAnchor } from '@angular/material/button';
 
 const POSTS = [
   {
@@ -38,10 +35,9 @@ const POSTS = [
   },
 ];
 @Component({
-    selector: 'app-main-page-posts',
-    templateUrl: './main-page-posts.component.html',
-    styleUrl: './main-page-posts.component.scss',
-    imports: [RouterLink, MatTooltip, MatAnchor]
+  selector: 'app-main-page-posts',
+  templateUrl: './main-page-posts.component.html',
+  styleUrl: './main-page-posts.component.scss',
 })
 export class MainPagePostsComponent {
   posts = POSTS;

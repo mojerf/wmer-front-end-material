@@ -1,8 +1,4 @@
 import { Component } from '@angular/core';
-import { MatTooltip } from '@angular/material/tooltip';
-import { MatAnchor } from '@angular/material/button';
-import { RouterLink } from '@angular/router';
-import { PaginatorComponent } from '../../../shared/components/paginator/paginator.component';
 
 const PRODUCTS = [
   {
@@ -44,10 +40,9 @@ const PRODUCTS = [
 ];
 
 @Component({
-    selector: 'app-store-main',
-    templateUrl: './store-main.component.html',
-    styleUrl: './store-main.component.scss',
-    imports: [MatTooltip, MatAnchor, RouterLink, PaginatorComponent]
+  selector: 'app-store-main',
+  templateUrl: './store-main.component.html',
+  styleUrl: './store-main.component.scss',
 })
 export class StoreMainComponent {
   title = 'فروشگاه';

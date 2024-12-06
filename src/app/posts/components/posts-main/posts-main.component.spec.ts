@@ -11,8 +11,9 @@ describe('PostsMainComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [SharedModule, MatTooltipModule, RouterModule.forRoot([]), PostsMainComponent],
-}).compileComponents();
+      declarations: [PostsMainComponent],
+      imports: [SharedModule, MatTooltipModule, RouterModule.forRoot([])],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PostsMainComponent);
     component = fixture.componentInstance;

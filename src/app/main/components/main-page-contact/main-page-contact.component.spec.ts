@@ -11,8 +11,9 @@ describe('MainPageContactComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [MatFormFieldModule, MatInputModule, NoopAnimationsModule, MainPageContactComponent],
-}).compileComponents();
+      declarations: [MainPageContactComponent],
+      imports: [MatFormFieldModule, MatInputModule, NoopAnimationsModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MainPageContactComponent);
     component = fixture.componentInstance;

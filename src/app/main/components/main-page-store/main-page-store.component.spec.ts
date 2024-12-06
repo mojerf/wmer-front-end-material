@@ -10,8 +10,9 @@ describe('MainPageStoreComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [MatTooltipModule, RouterModule.forRoot([]), MainPageStoreComponent],
-}).compileComponents();
+      declarations: [MainPageStoreComponent],
+      imports: [MatTooltipModule, RouterModule.forRoot([])],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MainPageStoreComponent);
     component = fixture.componentInstance;

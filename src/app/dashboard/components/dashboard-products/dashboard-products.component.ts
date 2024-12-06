@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationModalComponent } from '../../../shared/components/confirmation-modal/confirmation-modal.component';
-import { RouterLink } from '@angular/router';
-import { MatTooltip } from '@angular/material/tooltip';
-import { MatAnchor } from '@angular/material/button';
 
 const PRODUCTS = [
   {
@@ -14,10 +11,9 @@ const PRODUCTS = [
 ];
 
 @Component({
-    selector: 'app-dashboard-products',
-    templateUrl: './dashboard-products.component.html',
-    styleUrl: './dashboard-products.component.scss',
-    imports: [RouterLink, MatTooltip, MatAnchor]
+  selector: 'app-dashboard-products',
+  templateUrl: './dashboard-products.component.html',
+  styleUrl: './dashboard-products.component.scss',
 })
 export class DashboardProductsComponent {
   products = PRODUCTS;

@@ -4,9 +4,6 @@ import { CartService } from '../../../shared/services/cart/cart.service';
 import { FullProduct } from '../../../shared/models/cart';
 import { Comment } from '../../../shared/models/comment';
 import { Title } from '@angular/platform-browser';
-import { MatButton } from '@angular/material/button';
-import { MatTooltip } from '@angular/material/tooltip';
-import { CommentSectionComponent } from '../../../shared/components/comment-section/comment-section.component';
 
 const PRODUCT: FullProduct = {
   id: 1,
@@ -48,10 +45,9 @@ const COMMENTS: Comment[] = [
 ];
 
 @Component({
-    selector: 'app-product-page',
-    templateUrl: './product-page.component.html',
-    styleUrl: './product-page.component.scss',
-    imports: [MatButton, MatTooltip, CommentSectionComponent]
+  selector: 'app-product-page',
+  templateUrl: './product-page.component.html',
+  styleUrl: './product-page.component.scss',
 })
 export class ProductPageComponent implements OnInit {
   product: FullProduct = PRODUCT;

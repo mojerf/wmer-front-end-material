@@ -1,17 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../../../../shared/services/theme/theme.service';
 import { ActivatedRoute } from '@angular/router';
-import { MatFormField, MatLabel } from '@angular/material/form-field';
-import { MatInput } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
-import { EditorComponent } from '@tinymce/tinymce-angular';
-import { MatButton } from '@angular/material/button';
 
 @Component({
-    selector: 'app-product-form',
-    templateUrl: './product-form.component.html',
-    styleUrl: './product-form.component.scss',
-    imports: [MatFormField, MatLabel, MatInput, FormsModule, EditorComponent, MatButton]
+  selector: 'app-product-form',
+  templateUrl: './product-form.component.html',
+  styleUrl: './product-form.component.scss',
 })
 export class ProductFormComponent implements OnInit {
   isHighlighted = false;
